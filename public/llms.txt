@@ -1,0 +1,79 @@
+# Business — Generative Engine Optimization Map
+
+---
+
+## Pages
+
+### בית
+https://example.com
+גלו את קולקציית מזוודות הפרימיום של NEWTON - איכות ללא פשרות, אלגנטיות נצחית וסטייל קלאסי לכל מסע. יבוא ישיר של מזוודות יוקרה מהשורה הראשונה.
+
+### אודות
+https://example.com/about
+למה NEWTON? כי איכות אמיתית לא מתפשרת. הכירו את החזון שלנו ליבוא מזוודות יוקרה קלאסיות, המחויבות למצוינות והתשוקה לפרטים הקטנים שעושים את ההבדל.
+
+### גלריית מורשת
+https://example.com/gallery
+צפו בגלריית המורשת שלנו - מזוודות קלאסיות שמשלבות עיצוב נצחי עם פונקציונליות מודרנית. כל פריט הוא יצירת אומנות נוסעת. הצטרפו למסע ויזואלי מרהיב.
+
+### צור קשר
+https://example.com/contact
+מעוניינים במזוודת יוקרה מושלמת? צרו קשר עם מומחי NEWTON עוד היום. נשמח לייעץ, להתאים אישית ולהפוך כל נסיעה שלכם לחוויה יוקרתית בלתי נשכחת.
+
+### Products
+https://example.com/products
+המוצרים שלנו - NEWTON
+
+### Cart
+https://example.com/cart
+עגלת הקניות שלך
+
+### Checkout
+https://example.com/checkout
+תשלום
+
+### Login
+https://example.com/login
+התחברות לקוחות
+
+### Account
+https://example.com/account
+החשבון שלי
+
+### Order Success
+https://example.com/order-success
+תודה על ההזמנה
+
+### Product Detail
+https://example.com/product/:slug
+פרטי המוצר - NEWTON
+
+### Category
+https://example.com/category/:slug
+מוצרים - NEWTON
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Business
+---
+
+# Additional Resources
+
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
