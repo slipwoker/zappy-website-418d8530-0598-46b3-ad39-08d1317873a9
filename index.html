@@ -416,6 +416,215 @@
   }
 }
 </style>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.index-showcase-section {
+  position: relative;
+  background: linear-gradient(180deg, #F4ECE2 0%, #EFE3D4 55%, #F4ECE2 100%);
+  color: var(--text-dark);
+  padding: 80px 16px;
+  overflow: visible;
+  direction: rtl;
+}
+
+.index-showcase-section .decorative-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='rgba(17,24,39,0.03)' stroke-width='1'%3E%3Cpath d='M0 60H120'/%3E%3Cpath d='M60 0V120'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  background-position: center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.index-showcase-section .showcase-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.index-showcase-section .showcase-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.index-showcase-section .showcase-header h2 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.index-showcase-section .showcase-subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.index-showcase-section .showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+  direction: rtl;
+}
+
+.index-showcase-section .showcase-card {
+  background: #F4ECE2;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  border: 1px solid rgba(10,20,30,0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.index-showcase-section .showcase-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #8F6727 0%, #C79A4A 50%, #E2B86A 100%);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.index-showcase-section .showcase-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.18);
+}
+
+.index-showcase-section .showcase-card:hover::before {
+  transform: scaleX(1);
+}
+
+.index-showcase-section .card-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+}
+
+.index-showcase-section .card-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.index-showcase-section .showcase-card:hover .card-image-wrapper img {
+  transform: scale(1.08);
+}
+
+.index-showcase-section .image-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(17,24,39,0) 0%, rgba(17,24,39,0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.index-showcase-section .showcase-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.index-showcase-section .card-content {
+  padding: 28px;
+  text-align: right;
+}
+
+.index-showcase-section .card-content h3 {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+
+.index-showcase-section .card-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.index-showcase-section .card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  direction: rtl;
+}
+
+.index-showcase-section .card-link svg {
+  transition: transform 0.3s ease;
+}
+
+.index-showcase-section .card-link:hover {
+  color: var(--accent);
+  gap: 12px;
+}
+
+.index-showcase-section .card-link:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .index-showcase-section {
+    padding: 60px 16px;
+  }
+
+  .index-showcase-section .showcase-header {
+    margin-bottom: 40px;
+  }
+
+  .index-showcase-section .showcase-header h2 {
+    font-size: 28px;
+  }
+
+  .index-showcase-section .showcase-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .index-showcase-section .card-image-wrapper {
+    height: 240px;
+  }
+
+  .index-showcase-section .card-content {
+    padding: 20px;
+  }
+
+  .index-showcase-section .card-content h3 {
+    font-size: 20px;
+  }
+}
+</style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -1033,14 +1242,73 @@
     </section>
   
 
-    <section class="featured-categories-section" id="featured-categories" data-zappy-dynamic="true">
-      <div class="container">
-        <h2 class="section-title">קנו לפי קטגוריה</h2>
-        <div class="category-blocks" id="zappy-featured-categories">
-          <div class="loading-categories">טוען מוצרים...</div>
+    <section class="index-showcase-section" data-layout-spec="בית-showcase" data-zappy-section="true" id="featured-categories">
+  <div class="showcase-container">
+    <div class="showcase-header">
+      <h2>אייקוני נסיעות מאורגנים</h2>
+      <p class="showcase-subtitle">שלוש ביטויים של יוקרה קלאסית לטקסי נסיעה שונים</p>
+    </div>
+
+    <div class="showcase-grid">
+      <!-- Card 1 -->
+      <article class="showcase-card">
+        <div class="card-image-wrapper">
+          <img alt="מזוודת יד אלגנטית" src="/assets/site-index-showcase-image-1.webp" data-placeholder="index-showcase-image-1" data-context="Premium elegant carry-on suitcase in deep navy or charcoal, studio shot on cream background, classic luxury luggage with leather details and brass hardware, editorial product photography for high-end travel brand" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" data-zappy-editable-image="true">
+          <div class="image-overlay"></div>
         </div>
-      </div>
-    </section>
+        <div class="card-content">
+          <h3>אלגנטיות של מזוודת יד</h3>
+          <p>מזוודה קומפקטית המשלבת פונקציונליות עם סגנון מעודן לנוסע המודרני.</p>
+          <a href="/contact" class="card-link">
+            <span>פרטים נוספים</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="showcase-card">
+        <div class="card-image-wrapper">
+          <img alt="מזוודה לטיסות ארוכות" src="/assets/site-index-showcase-image-2.webp" data-placeholder="index-showcase-image-2" data-context="Large luxury suitcase for long-haul travel, premium leather-trimmed hard-shell luggage in rich brown or black, sophisticated travel trunk with gold accents, editorial luxury product shot on neutral background" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" data-zappy-editable-image="true">
+          <div class="image-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>הדר לטיסות ארוכות</h3>
+          <p>מזוודה מרווחת המעניקה פתרון מושלם לנסיעות ממושכות עם נוחות וסגנון.</p>
+          <a href="/contact" class="card-link">
+            <span>פרטים נוספים</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="showcase-card">
+        <div class="card-image-wrapper">
+          <img alt="תא מטען בהשראת מורשת" src="/assets/site-index-showcase-image-3.webp" data-placeholder="index-showcase-image-3" data-context="Heritage-inspired vintage travel trunk, classic steamer trunk design with leather straps and brass corners, luxury luggage with old-world craftsmanship, editorial shot on parchment background" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" data-zappy-editable-image="true">
+          <div class="image-overlay"></div>
+        </div>
+        <div class="card-content">
+          <h3>מזוודה בהשראת מורשת</h3>
+          <p>עיצוב קלאסי המשלב מלאכות מסורתית עם פרקטיקה עכשווית לנוסע המתוחכם.</p>
+          <a href="/contact" class="card-link">
+            <span>פרטים נוספים</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 4L6 10L12 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Decorative pattern overlay -->
+  <div class="decorative-pattern" aria-hidden="true"></div>
+</section>
   
 
 <section class="index-story-section" data-layout-spec="בית-story" id="zappy-section-1">
