@@ -383,577 +383,732 @@
 
 
 
-<section style="width:100%;max-width:100%;box-sizing:border-box;background:var(--bg-dark);position:relative;overflow:hidden;font-family:var(--font-heading);direction:rtl;" data-zappy-section="true" class="section" id="temp-section-1773833785786">
+<section style="width:100%;max-width:100%;box-sizing:border-box;background:var(--bg-dark);position:relative;overflow:visible;padding-bottom:80px;" data-zappy-section="true" class="section" id="temp-section-1773833785786">
 <style>
-  .nx-products-section {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+  .newton-products-section {
+    direction: rtl;
+    font-family: var(--font-body);
     background: var(--gradient-dark-section);
+    min-height: 100vh;
     position: relative;
+    overflow: visible;
+    padding: 0 0 80px 0;
+  }
+
+  .newton-products-section * {
+    box-sizing: border-box;
+  }
+
+  /* ─── HERO BAND ─── */
+  .np-hero-band {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
   }
 
-  /* === HEADER BAND === */
-  .nx-header-band {
-    position: relative;
-    z-index: 10;
-    padding: 7rem 2rem 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.2rem;
+  .np-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
   }
 
-  .nx-eyebrow {
-    display: flex;
+  .np-hero-bg div[data-preserve-bg] {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.38) saturate(1.2);
+    transform: scale(1.04);
+    transition: transform 8s ease;
+  }
+
+  .np-hero-band:hover .np-hero-bg div[data-preserve-bg] {
+    transform: scale(1.0);
+  }
+
+  .np-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(160deg, rgba(15,42,68,0.82) 0%, rgba(10,30,48,0.55) 60%, rgba(15,118,110,0.22) 100%);
+  }
+
+  .np-hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 100px 2rem 60px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .np-eyebrow {
+    display: inline-flex;
     align-items: center;
-    gap: 1rem;
-    color: #C79A4A;
-    font-family: var(--font-body);
+    gap: 0.8rem;
+    color: #E2B86A;
     font-size: 0.72rem;
-    letter-spacing: 0.35em;
+    letter-spacing: 0.28em;
     text-transform: uppercase;
+    font-family: var(--font-body);
+    font-weight: 600;
+    margin-bottom: 1.4rem;
     opacity: 0.9;
   }
 
-  .nx-eyebrow::before,
-  .nx-eyebrow::after {
+  .np-eyebrow::before,
+  .np-eyebrow::after {
     content: '';
     display: block;
-    width: 40px;
+    width: 36px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #C79A4A);
+    background: linear-gradient(90deg, transparent, #E2B86A, transparent);
   }
 
-  .nx-eyebrow::after {
-    background: linear-gradient(270deg, transparent, #C79A4A);
-  }
-
-  .nx-main-title {
+  .np-hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.8rem, 7vw, 6rem);
-    font-weight: 300;
-    color: var(--text-light);
-    text-align: center;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin: 0;
-  }
-
-  .nx-main-title span {
-    display: block;
-    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-size: clamp(3rem, 8vw, 7rem);
     font-weight: 400;
-    color: #C79A4A;
-    letter-spacing: 0.15em;
-    font-family: var(--font-body);
-    text-transform: uppercase;
-    margin-bottom: 0.4rem;
+    line-height: 1.0;
+    color: var(--text-light);
+    letter-spacing: -0.02em;
+    margin: 0 0 0.3em;
   }
 
-  .nx-filter-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    background: transparent;
-    border: 1px solid rgba(199,154,74,0.5);
-    color: #C79A4A;
-    font-family: var(--font-body);
-    font-size: 0.78rem;
+  .np-hero-title span {
+    display: block;
+    font-style: italic;
+    background: var(--gradient-gold-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 0.65em;
+    letter-spacing: 0.12em;
+    font-style: normal;
+  }
+
+  .np-hero-sub {
+    color: rgba(246,240,230,0.55);
+    font-size: 0.82rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    padding: 0.65rem 1.8rem;
-    cursor: pointer;
-    transition: all 0.35s ease;
-    position: relative;
-    overflow: hidden;
-    margin-top: 0.5rem;
+    margin-top: 1.6rem;
   }
 
-  .nx-filter-btn::before {
+  /* ─── FILTER BAR ─── */
+  .np-filter-bar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 1.6rem 1.5rem;
+    background: rgba(15,42,68,0.7);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(139,133,124,0.2);
+    border-bottom: 1px solid rgba(139,133,124,0.15);
+  }
+
+  .np-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    background: transparent;
+    border: 1px solid rgba(226,184,106,0.45);
+    color: #E2B86A;
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+    padding: 0.65rem 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .np-filter-btn::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(199,154,74,0.15), rgba(199,154,74,0.05));
+    background: var(--gradient-gold-accent);
     opacity: 0;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.3s ease;
   }
 
-  .nx-filter-btn:hover::before { opacity: 1; }
-  .nx-filter-btn:hover {
-    border-color: #C79A4A;
-    color: #E2B86A;
+  .np-filter-btn:hover::before { opacity: 1; }
+  .np-filter-btn:hover { color: var(--bg-dark); border-color: transparent; }
+  .np-filter-btn span { position: relative; z-index: 1; }
+
+  .np-filter-tag {
+    color: rgba(246,240,230,0.4);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(246,240,230,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: var(--font-body);
+    background: transparent;
   }
 
-  .nx-filter-icon {
-    width: 14px;
-    height: 14px;
-    opacity: 0.7;
+  .np-filter-tag:hover,
+  .np-filter-tag.active {
+    color: var(--text-light);
+    border-color: rgba(246,240,230,0.35);
   }
 
-  /* === GRID === */
-  .nx-grid {
-    position: relative;
-    z-index: 10;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 0;
-    max-width: 1400px;
+  /* ─── PRODUCTS GRID ─── */
+  .np-products-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem 4rem;
+    padding: 5rem 1.5rem 2rem;
   }
 
-  /* Card base */
-  .nx-card {
+  .np-section-label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .np-section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(139,133,124,0.45), transparent);
+  }
+
+  .np-section-label-text {
+    color: rgba(246,240,230,0.35);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+    white-space: nowrap;
+  }
+
+  /* Asymmetric 3-column product grid */
+  .np-products-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.9fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2px;
+    align-items: stretch;
+  }
+
+  /* ─── PRODUCT CARD ─── */
+  .np-card {
     position: relative;
     overflow: hidden;
+    background: rgba(10,30,48,0.6);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
   }
 
-  /* Card 1 — tall left, spans 2 rows */
-  .nx-card-1 {
-    grid-column: 2;
+  .np-card:nth-child(1) {
+    grid-column: 1;
     grid-row: 1 / 3;
   }
 
-  /* Card 2 — top right */
-  .nx-card-2 {
-    grid-column: 1;
+  .np-card:nth-child(2) {
+    grid-column: 2;
     grid-row: 1;
   }
 
-  /* Card 3 — bottom right spans full width */
-  .nx-card-3 {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    min-height: 380px;
+  .np-card:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1 / 3;
   }
 
-  /* Image containers */
-  .nx-card-img {
-    width: 100%;
-    height: 100%;
-    min-height: 420px;
-    display: block;
+  /* Card image container */
+  .np-card-img-wrap {
     position: relative;
+    overflow: hidden;
+    flex: 1;
   }
 
-  .nx-card-1 .nx-card-img { min-height: 680px; }
-  .nx-card-2 .nx-card-img { min-height: 340px; }
+  .np-card:nth-child(1) .np-card-img-wrap { min-height: 520px; }
+  .np-card:nth-child(2) .np-card-img-wrap { min-height: 300px; }
+  .np-card:nth-child(3) .np-card-img-wrap { min-height: 520px; }
 
-  .nx-card-img-inner {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .nx-card:hover .nx-card-img-inner {
-    transform: scale(1.06);
-  }
-
-  .nx-card-img-inner img {
+  .np-card-img-wrap img[data-preserve-image] {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.5s ease;
+    filter: saturate(0.85) brightness(0.9);
   }
 
-  /* Overlay gradient on cards */
-  .nx-card-overlay {
+  .np-card:hover .np-card-img-wrap img[data-preserve-image] {
+    transform: scale(1.07);
+    filter: saturate(1.1) brightness(1.0);
+  }
+
+  /* Card overlay gradient */
+  .np-card-img-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(10,18,28,0.92) 0%, rgba(10,18,28,0.3) 45%, rgba(10,18,28,0.05) 100%);
-    z-index: 2;
-    transition: background 0.4s ease;
+    background: linear-gradient(0deg, rgba(10,30,48,0.88) 0%, rgba(10,30,48,0.25) 55%, rgba(10,30,48,0.05) 100%);
+    transition: opacity 0.4s ease;
   }
 
-  .nx-card:hover .nx-card-overlay {
-    background: linear-gradient(to top, rgba(10,18,28,0.97) 0%, rgba(10,18,28,0.5) 55%, rgba(10,18,28,0.1) 100%);
+  .np-card:hover .np-card-img-overlay {
+    opacity: 0.7;
   }
 
-  /* Card content */
-  .nx-card-content {
+  /* Card badge */
+  .np-card-badge {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: 2rem 1.8rem;
+    top: 1.2rem;
+    right: 1.2rem;
     z-index: 5;
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .nx-card-3 .nx-card-content {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-    padding: 2.5rem 2.5rem;
-  }
-
-  .nx-card-tag {
-    font-family: var(--font-body);
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
+    background: var(--gradient-gold-accent);
+    color: rgba(10,30,48,0.95);
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #C79A4A;
+    font-weight: 700;
+    padding: 0.32rem 0.75rem;
+    font-family: var(--font-body);
+  }
+
+  /* Card number */
+  .np-card-num {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    z-index: 5;
+    color: rgba(226,184,106,0.5);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    font-style: italic;
+  }
+
+  /* Card body */
+  .np-card-body {
+    padding: 1.6rem 1.6rem 1.8rem;
+    position: relative;
+    z-index: 5;
+    background: linear-gradient(0deg, rgba(10,20,32,0.97) 0%, rgba(10,20,32,0.0) 100%);
+    margin-top: -80px;
+  }
+
+  .np-card-collection {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(226,184,106,0.65);
+    font-family: var(--font-body);
+    margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
 
-  .nx-card-tag::before {
+  .np-card-collection::before {
     content: '';
     display: inline-block;
     width: 18px;
     height: 1px;
-    background: #C79A4A;
+    background: rgba(226,184,106,0.5);
   }
 
-  .nx-card-title {
+  .np-card-title {
     font-family: var(--font-heading);
-    font-size: clamp(1.3rem, 2.5vw, 2rem);
-    font-weight: 300;
+    font-size: clamp(1.4rem, 2.5vw, 2.1rem);
+    font-weight: 400;
     color: var(--text-light);
-    margin: 0;
-    line-height: 1.2;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.1rem;
+    line-height: 1.15;
   }
 
-  .nx-card-link {
+  .np-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(139,133,124,0.2);
+    padding-top: 1rem;
+  }
+
+  .np-card-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .np-card-tag {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(246,240,230,0.35);
+    font-family: var(--font-body);
+    padding: 0.2rem 0.55rem;
+    border: 1px solid rgba(246,240,230,0.1);
+  }
+
+  /* CTA Link */
+  .np-card-cta {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    color: #C79A4A;
-    font-family: var(--font-body);
+    gap: 0.55rem;
+    color: #E2B86A;
     font-size: 0.72rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     text-decoration: none;
-    margin-top: 0.3rem;
+    font-family: var(--font-body);
+    font-weight: 600;
     position: relative;
-    width: fit-content;
     transition: gap 0.3s ease;
   }
 
-  .nx-card-link::after {
+  .np-card-cta::after {
     content: '';
-    position: absolute;
-    bottom: -2px;
-    right: 0;
-    left: 0;
+    display: block;
+    width: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #C79A4A);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+    background: #E2B86A;
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    transition: width 0.35s ease;
   }
 
-  .nx-card:hover .nx-card-link::after {
-    transform: scaleX(1);
-  }
+  .np-card:hover .np-card-cta::after { width: 100%; }
+  .np-card:hover .np-card-cta { gap: 0.85rem; }
 
-  .nx-card:hover .nx-card-link {
-    gap: 0.8rem;
-  }
-
-  .nx-card-link svg {
+  .np-card-cta svg {
     width: 14px;
     height: 14px;
+    flex-shrink: 0;
     transition: transform 0.3s ease;
   }
 
-  .nx-card:hover .nx-card-link svg {
-    transform: translateX(-4px);
-  }
+  .np-card:hover .np-card-cta svg { transform: translateX(-4px); }
 
-  /* Card 3 special wide layout */
-  .nx-card-3-text {
+  /* ─── CARD 2 SPECIAL (no main image, uses card layout) ─── */
+  .np-card-info {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .nx-card-3-meta {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    font-family: var(--font-body);
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    color: rgba(199,154,74,0.6);
-    text-transform: uppercase;
-  }
-
-  /* Dividers between cards */
-  .nx-card-1 { border-right: 1px solid rgba(199,154,74,0.12); }
-  .nx-card-2 { border-bottom: 1px solid rgba(199,154,74,0.12); }
-
-  /* Gold shine decoration */
-  .nx-gold-line {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1px;
-    height: 60%;
-    background: linear-gradient(to bottom, transparent, rgba(199,154,74,0.3), transparent);
-    z-index: 0;
-    pointer-events: none;
-  }
-
-  /* Floating number badges */
-  .nx-card-num {
-    position: absolute;
-    top: 1.2rem;
-    left: 1.2rem;
-    font-family: var(--font-heading);
-    font-size: 0.68rem;
-    color: rgba(199,154,74,0.5);
-    letter-spacing: 0.25em;
-    z-index: 5;
-    font-weight: 300;
-  }
-
-  /* === BOTTOM DECORATIVE BAND === */
-  .nx-bottom-band {
-    position: relative;
-    z-index: 10;
-    border-top: 1px solid rgba(199,154,74,0.15);
-    padding: 1.5rem 2rem;
-    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-  }
-
-  .nx-bottom-item {
-    font-family: var(--font-body);
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    color: rgba(246,240,230,0.3);
-    text-transform: uppercase;
-  }
-
-  .nx-bottom-dot {
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background: rgba(199,154,74,0.35);
-  }
-
-  /* === BACKGROUND DECOR === */
-  .nx-bg-decor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    pointer-events: none;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, rgba(15,118,110,0.12) 0%, rgba(15,42,68,0.95) 100%);
+    border: 1px solid rgba(139,133,124,0.12);
+    text-align: center;
+    min-height: 200px;
+    position: relative;
     overflow: hidden;
   }
 
-  .nx-bg-circle {
+  .np-card-info::before {
+    content: 'NEWTON LUXURY';
     position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(199,154,74,0.06);
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(226,184,106,0.04);
+    white-space: nowrap;
+    letter-spacing: 0.05em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
   }
 
-  .nx-bg-circle-1 {
-    width: 600px;
-    height: 600px;
-    top: -200px;
-    right: -200px;
+  .np-card-info-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(226,184,106,0.6);
+    font-family: var(--font-body);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
   }
 
-  .nx-bg-circle-2 {
-    width: 400px;
-    height: 400px;
-    bottom: 100px;
-    left: -150px;
+  .np-card-info-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--text-light);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 0.6rem;
+    position: relative;
+    z-index: 1;
   }
 
-  /* === RESPONSIVE === */
+  .np-card-info-title em {
+    font-style: italic;
+    background: var(--gradient-gold-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .np-card-info-sub {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(246,240,230,0.25);
+    font-family: var(--font-body);
+    position: relative;
+    z-index: 1;
+    margin-top: 0.8rem;
+  }
+
+  .np-divider-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(226,184,106,0.3);
+    margin: 0.8rem auto 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .np-divider-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* ─── BOTTOM META ─── */
+  .np-bottom-meta {
+    max-width: 1200px;
+    margin: 4rem auto 0;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(139,133,124,0.15);
+    padding-top: 2rem;
+  }
+
+  .np-meta-brand {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: rgba(246,240,230,0.18);
+    letter-spacing: 0.06em;
+    font-style: italic;
+  }
+
+  .np-meta-tags {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .np-meta-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(246,240,230,0.22);
+    font-family: var(--font-body);
+  }
+
+  /* ─── SVG BOTTOM DIVIDER ─── */
+  .np-bottom-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  /* ─── RESPONSIVE ─── */
   @media (max-width: 900px) {
-    .nx-grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      padding: 0 1rem 3rem;
+    .np-products-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
     }
 
-    .nx-card-1 {
-      grid-column: 1;
+    .np-card:nth-child(1) {
+      grid-column: 1 / 3;
       grid-row: 1;
     }
 
-    .nx-card-2 {
+    .np-card:nth-child(2) {
       grid-column: 1;
       grid-row: 2;
     }
 
-    .nx-card-3 {
+    .np-card:nth-child(3) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+
+    .np-card:nth-child(1) .np-card-img-wrap { min-height: 380px; }
+    .np-card:nth-child(2) .np-card-img-wrap { min-height: 320px; }
+    .np-card:nth-child(3) .np-card-img-wrap { min-height: 320px; }
+  }
+
+  @media (max-width: 600px) {
+    .np-products-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    .np-card:nth-child(1),
+    .np-card:nth-child(2),
+    .np-card:nth-child(3) {
       grid-column: 1;
-      grid-row: 3;
+      grid-row: auto;
     }
 
-    .nx-card-1 { border-right: none; border-bottom: 1px solid rgba(199,154,74,0.12); }
-
-    .nx-card-1 .nx-card-img { min-height: 480px; }
-    .nx-card-2 .nx-card-img { min-height: 320px; }
-
-    .nx-header-band {
-      padding-top: 110px;
+    .np-card:nth-child(1) .np-card-img-wrap,
+    .np-card:nth-child(2) .np-card-img-wrap,
+    .np-card:nth-child(3) .np-card-img-wrap {
+      min-height: 280px;
     }
 
-    .nx-card-3 .nx-card-content {
+    .np-filter-bar {
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .np-bottom-meta {
       flex-direction: column;
+      gap: 1.2rem;
       align-items: flex-start;
     }
-  }
 
-  @media (max-width: 480px) {
-    .nx-header-band { padding-top: 100px; padding-left: 1rem; padding-right: 1rem; }
-    .nx-card-1 .nx-card-img { min-height: 380px; }
-    .nx-card-3 { min-height: 300px; }
-    .nx-bottom-band { gap: 1.5rem; flex-wrap: wrap; }
-  }
-
-  /* Hover shimmer */
-  @keyframes shimmer {
-    0% { background-position: -200% center; }
-    100% { background-position: 200% center; }
-  }
-
-  .nx-card-link:hover {
-    background: var(--gradient-gold-shine);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 1.5s linear infinite;
+    .np-hero-content {
+      padding-top: 100px;
+    }
   }
 </style>
 
-<div class="nx-products-section">
+<div class="newton-products-section">
 
-  <!-- Background decoration -->
-  <div class="nx-bg-decor">
-    <div class="nx-bg-circle nx-bg-circle-1"></div>
-    <div class="nx-bg-circle nx-bg-circle-2"></div>
+  <!-- ─── HERO BAND ─── -->
+  <div class="np-hero-band">
+    <div class="np-hero-bg">
+      <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773833808022-ck7zv4.webp'); background-size:cover;background-position:center;width:100%;height:100%;"></div>
+    </div>
+    <div class="np-hero-overlay"></div>
+    <div class="np-hero-content">
+      <div class="np-eyebrow">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 0L7.35 4.65L12 6L7.35 7.35L6 12L4.65 7.35L0 6L4.65 4.65L6 0Z" fill="#E2B86A"></path></svg>
+        קולקציה בלעדית
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 0L7.35 4.65L12 6L7.35 7.35L6 12L4.65 7.35L0 6L4.65 4.65L6 0Z" fill="#E2B86A"></path></svg>
+      </div>
+      <h1 class="np-hero-title">
+        Newton Luxury
+        <span>המוצרים שלנו</span>
+      </h1>
+      <p class="np-hero-sub">מוצרי יוקרה &nbsp;·&nbsp; עיצוב קלאסי &nbsp;·&nbsp; Newton Luxury</p>
+    </div>
   </div>
 
-  <!-- Header -->
-  <div class="nx-header-band">
-    <div class="nx-eyebrow">
-      <svg class="nx-filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 2l1.5 4.5h4.5l-3.5 2.8 1.3 4.2-3.8-2.7L8 13.5l1.3-4.2L5.8 6.5h4.5z"></path>
-      </svg>
-      קולקציית יוקרה
-      <svg class="nx-filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 2l1.5 4.5h4.5l-3.5 2.8 1.3 4.2-3.8-2.7L8 13.5l1.3-4.2L5.8 6.5h4.5z"></path>
-      </svg>
-    </div>
-    <h1 class="nx-main-title">
-      <span>Newton Luxury</span>
-      המוצרים שלנו
-    </h1>
-    <button class="nx-filter-btn">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <line x1="4" y1="6" x2="20" y2="6"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="11" y1="18" x2="13" y2="18"></line>
-      </svg>
-      סינון
+  <!-- ─── FILTER BAR ─── -->
+  <div class="np-filter-bar">
+    <button class="np-filter-btn">
+      <span>
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none" style="vertical-align:middle;margin-left:5px;"><path d="M2 4h12M4 8h8M6 12h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        סינון
+      </span>
     </button>
+    <button class="np-filter-tag active">כל הקולקציה</button>
+    <button class="np-filter-tag">קולקציה בלעדית</button>
+    <button class="np-filter-tag">בלעדי</button>
   </div>
 
-  <!-- Product Grid -->
-  <div class="nx-grid">
+  <!-- ─── PRODUCTS GRID ─── -->
+  <div class="np-products-wrapper">
 
-    <!-- Card 1 — tall -->
-    <div class="nx-card nx-card-1">
-      <div class="nx-card-img" style="position:relative;">
-        <div class="nx-card-img-inner">
-          <img alt="מזוודה יחודית" style="width:100%;height:100%;object-fit:cover;display:block;" src="/assets/product-enhanced-1773834191646-hp1etg.webp" data-zappy-editable-image="true">
-        </div>
-        <div class="nx-card-overlay"></div>
-      </div>
-      <span class="nx-card-num">01 — קולקציה בלעדית</span>
-      <div class="nx-card-content">
-        <div class="nx-card-tag">בלעדי</div>
-        <h3 class="nx-card-title">מזוודה יחודית</h3>
-        <a href="#" class="nx-card-link">
-          לפרטים
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M19 12H5M12 5l-7 7 7 7"></path>
-          </svg>
-        </a>
-      </div>
+    <div class="np-section-label">
+      <span class="np-section-label-text">01 — קולקציה בלעדית</span>
     </div>
 
-    <!-- Card 2 — top -->
-    <div class="nx-card nx-card-2">
-      <div class="nx-card-img" style="position:relative;">
-        <div class="nx-card-img-inner">
-          <img alt="מזוודה מיוחדת" style="width:100%;height:100%;object-fit:cover;display:block;" src="/assets/product-1773834090551-uolxw.webp" data-zappy-editable-image="true">
-        </div>
-        <div class="nx-card-overlay"></div>
-      </div>
-      <span class="nx-card-num">02 — קולקציה</span>
-      <div class="nx-card-content">
-        <div class="nx-card-tag">קולקציה</div>
-        <h3 class="nx-card-title">מזוודה מיוחדת</h3>
-        <a href="#" class="nx-card-link">
-          לפרטים
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M19 12H5M12 5l-7 7 7 7"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
+    <div class="np-products-grid">
 
-    <!-- Card 3 — full width banner -->
-    <div class="nx-card nx-card-3">
-      <div class="nx-card-img" style="position:relative;min-height:380px;">
-        <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773833808022-ck7zv4.webp'); position:absolute;inset:0;background-size:cover;background-position:center top;transition:transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);"></div>
-        <div class="nx-card-overlay" style="background:linear-gradient(to right, rgba(10,18,28,0.88) 0%, rgba(10,18,28,0.5) 55%, rgba(10,18,28,0.1) 100%);"></div>
-      </div>
-      <span class="nx-card-num">03 — בלעדי</span>
-      <div class="nx-card-content">
-        <div class="nx-card-3-text">
-          <div class="nx-card-3-meta">
-            <span>NEWTON LUXURY</span>
-            <span>✦</span>
-            <span>בלעדי</span>
+      <!-- Card 1 -->
+      <article class="np-card">
+        <div class="np-card-img-wrap">
+          <img alt="מזוודה יחודית" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94),filter 0.5s ease;filter:saturate(0.85) brightness(0.9);" src="/assets/product-enhanced-1773834191646-hp1etg.webp" data-zappy-editable-image="true">
+          <div class="np-card-img-overlay"></div>
+          <span class="np-card-badge">בלעדי</span>
+          <span class="np-card-num">01</span>
+        </div>
+        <div class="np-card-body">
+          <div class="np-card-collection">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M6 0L7.35 4.65L12 6L7.35 7.35L6 12L4.65 7.35L0 6L4.65 4.65L6 0Z" fill="#E2B86A" opacity="0.7"></path></svg>
+            קולקציה
           </div>
-          <h3 class="nx-card-title" style="font-size:clamp(1.8rem,4vw,3rem);">ISAAC</h3>
+          <h3 class="np-card-title">מזוודה יחודית</h3>
+          <div class="np-card-footer">
+            <div class="np-card-tags">
+              <span class="np-card-tag">יוקרה</span>
+              <span class="np-card-tag">קלאסי</span>
+            </div>
+            <a href="#" class="np-card-cta">
+              לפרטים
+              <svg viewBox="0 0 16 16" fill="none"><path d="M10 8H2M6 4l-4 4 4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+          </div>
         </div>
-        <a href="#" class="nx-card-link" style="margin-top:0;">
-          לפרטים
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M19 12H5M12 5l-7 7 7 7"></path>
-          </svg>
-        </a>
-      </div>
-    </div>
+      </article>
 
-  </div>
+      <!-- Card 2 — info tile with Isaac title + card image below -->
+      <article class="np-card" style="grid-column:2;grid-row:1;flex-direction:column;">
+        <div class="np-card-info">
+          <p class="np-card-info-label">02 — קולקציה</p>
+          <h3 class="np-card-info-title"><em>ISAAC</em></h3>
+          <p class="np-card-info-sub">NEWTON LUXURY</p>
+          <div class="np-divider-icon">
+            <svg viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="3" stroke="#E2B86A" stroke-width="1.2"></circle>
+              <path d="M8 1v2M8 13v2M1 8h2M13 8h2" stroke="#E2B86A" stroke-width="1.2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="np-card-img-wrap" style="min-height:240px;flex:1;">
+          <img alt="מזוודה מיוחדת" style="width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94),filter 0.5s ease;filter:saturate(0.85) brightness(0.9);" src="/assets/product-1773834090551-uolxw.webp" data-zappy-editable-image="true">
+          <div class="np-card-img-overlay"></div>
+          <span class="np-card-badge">03 — בלעדי</span>
+        </div>
+        <div class="np-card-body">
+          <div class="np-card-collection">
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M6 0L7.35 4.65L12 6L7.35 7.35L6 12L4.65 7.35L0 6L4.65 4.65L6 0Z" fill="#E2B86A" opacity="0.7"></path></svg>
+            קולקציה בלעדית
+          </div>
+          <h3 class="np-card-title" style="font-size:clamp(1.1rem,2vw,1.6rem);">מזוודה מיוחדת</h3>
+          <div class="np-card-footer">
+            <div class="np-card-tags">
+              <span class="np-card-tag">בלעדי</span>
+            </div>
+            <a href="#" class="np-card-cta">
+              לפרטים
+              <svg viewBox="0 0 16 16" fill="none" style="width:14px;height:14px;"><path d="M10 8H2M6 4l-4 4 4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </a>
+          </div>
+        </div>
+      </article>
 
-  <!-- Bottom band -->
-  <div class="nx-bottom-band">
-    <span class="nx-bottom-item">Newton Luxury</span>
-    <div class="nx-bottom-dot"></div>
-    <span class="nx-bottom-item">קולקציה בלעדית</span>
-    <div class="nx-bottom-dot"></div>
-    <span class="nx-bottom-item">מוצרי יוקרה</span>
-    <div class="nx-bottom-dot"></div>
-    <span class="nx-bottom-item">עיצוב קלאסי</span>
-  </div>
-
-</div>
-</section>
+      <!-- Card 3 — accent -->
+      <article class="np-card" style="background:linear-gradient(160deg,rgba(15,118,110,0.15) 0%,rgba(10,30,48,0.98) 100%);">
+        <div style="padding:2rem 1.8rem 1rem;position:relative;z-index:5;">
+          <p style="font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(246,240,230,0.3);font-family:var(--font-body);margin:0 0 0.5rem;">NEWTON LUXURY</p>
+          <p style="font-family:var(--font-heading);font-size:clamp(1.6rem,3vw,2.8rem);font-weight:400;color:var(--text-light);letter-spacing:-0.02em;line-height:1.1;margin:0;">
+            </p></div></article></div></div></div></section>
 
 
 
