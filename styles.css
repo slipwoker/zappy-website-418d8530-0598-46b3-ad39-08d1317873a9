@@ -9817,6 +9817,16 @@ footer, footer * {
   height: 100%;
 }
 
+#temp-section-1773833785786 .np-card-img-wrap {
+  height: 320px;
+  width: 100%;
+}
+
+#temp-section-1773833785786 .np-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
