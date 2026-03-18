@@ -9724,6 +9724,20 @@ body.accessibility-widget-visible ._access-menu {
 /* === BUTTON TEXT OVERRIDES END === */
 
 
+400;500;600;700&display=swap');
+
+.index-hero-section, .index-hero-section * {
+  font-family: 'Assistant', sans-serif;
+}
+
+.index-showcase-section, .index-showcase-section * {
+  font-family: 'Assistant', sans-serif;
+}
+
+footer, footer * {
+  font-family: 'Assistant', sans-serif;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
