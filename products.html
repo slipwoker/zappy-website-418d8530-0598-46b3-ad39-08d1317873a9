@@ -383,572 +383,577 @@
 
 
 
-<section style="width:100%;max-width:100%;box-sizing:border-box;background:var(--bg-light);position:relative;overflow:visible;padding-bottom:0;" dir="rtl" data-zappy-section="true" class="section" id="temp-section-1773833785786">
+<section style="width:100%;max-width:100%;box-sizing:border-box;background:var(--bg-dark);position:relative;overflow:hidden;font-family:var(--font-heading);direction:rtl;" data-zappy-section="true" class="section" id="temp-section-1773833785786">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
-
-  .products-section {
+  .nx-products-section {
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
-    background: var(--gradient-light-section);
-    padding: 80px 0 100px;
+    background: var(--gradient-dark-section);
     position: relative;
-    font-family: var(--font-heading);
-    direction: rtl;
+    overflow: hidden;
   }
 
-  .products-section::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 4px;
-    background: var(--gradient-gold-accent);
+  /* === HEADER BAND === */
+  .nx-header-band {
+    position: relative;
+    z-index: 10;
+    padding: 7rem 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
   }
 
-  .products-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    box-sizing: border-box;
-  }
-
-  /* Header Row */
-  .products-header {
+  .nx-eyebrow {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 60px;
-    position: relative;
+    gap: 1rem;
+    color: #C79A4A;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    opacity: 0.9;
   }
 
-  .products-header::after {
+  .nx-eyebrow::before,
+  .nx-eyebrow::after {
     content: '';
-    position: absolute;
-    bottom: -20px;
-    right: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border-light), transparent);
-  }
-
-  .products-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 700;
-    color: var(--text-dark);
-    letter-spacing: -0.02em;
-    line-height: 1;
-    margin: 0;
-    position: relative;
-  }
-
-  .products-title span {
     display: block;
-    font-size: 0.22em;
-    font-family: var(--font-body, sans-serif);
-    font-weight: 400;
-    letter-spacing: 0.3em;
-    color: var(--accent);
-    text-transform: uppercase;
-    margin-bottom: 0.5em;
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #C79A4A);
   }
 
-  .filter-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--primary);
+  .nx-eyebrow::after {
+    background: linear-gradient(270deg, transparent, #C79A4A);
+  }
+
+  .nx-main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    font-weight: 300;
     color: var(--text-light);
-    border: none;
-    padding: 14px 28px;
-    font-family: var(--font-body, sans-serif);
-    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .nx-main-title span {
+    display: block;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-weight: 400;
+    color: #C79A4A;
     letter-spacing: 0.15em;
+    font-family: var(--font-body);
     text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  .nx-filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: transparent;
+    border: 1px solid rgba(199,154,74,0.5);
+    color: #C79A4A;
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.65rem 1.8rem;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.35s ease;
     position: relative;
     overflow: hidden;
+    margin-top: 0.5rem;
   }
 
-  .filter-btn::before {
+  .nx-filter-btn::before {
     content: '';
     position: absolute;
-    top: 0; left: -100%;
-    width: 100%; height: 100%;
-    background: var(--gradient-gold-accent);
-    transition: left 0.4s ease;
-    z-index: 0;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(199,154,74,0.15), rgba(199,154,74,0.05));
+    opacity: 0;
+    transition: opacity 0.35s ease;
   }
 
-  .filter-btn:hover::before {
-    left: 0;
+  .nx-filter-btn:hover::before { opacity: 1; }
+  .nx-filter-btn:hover {
+    border-color: #C79A4A;
+    color: #E2B86A;
   }
 
-  .filter-btn span, .filter-btn svg {
+  .nx-filter-icon {
+    width: 14px;
+    height: 14px;
+    opacity: 0.7;
+  }
+
+  /* === GRID === */
+  .nx-grid {
     position: relative;
-    z-index: 1;
-  }
-
-  .filter-btn:hover {
-    color: var(--primary);
-  }
-
-  /* Cards Grid — Asymmetric Magazine Layout */
-  .products-grid {
+    z-index: 10;
     display: grid;
-    grid-template-columns: 1.6fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     gap: 0;
-    align-items: stretch;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
   }
 
-  /* Card Base */
-  .product-card {
+  /* Card base */
+  .nx-card {
     position: relative;
     overflow: hidden;
-    background: var(--secondary);
-    transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
     cursor: pointer;
   }
 
-  .product-card:nth-child(1) {
+  /* Card 1 — tall left, spans 2 rows */
+  .nx-card-1 {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  /* Card 2 — top right */
+  .nx-card-2 {
     grid-column: 1;
     grid-row: 1;
-    min-height: 640px;
-    border-left: 4px solid var(--bg-light);
   }
 
-  .product-card:nth-child(2) {
-    grid-column: 2;
-    grid-row: 1;
-    min-height: 640px;
-    border-right: 4px solid var(--bg-light);
-    border-bottom: 4px solid var(--bg-light);
+  /* Card 3 — bottom right spans full width */
+  .nx-card-3 {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    min-height: 380px;
   }
 
-  .product-card:nth-child(3) {
-    grid-column: 3;
-    grid-row: 1;
-    min-height: 640px;
-    border-right: 4px solid var(--bg-light);
+  /* Image containers */
+  .nx-card-img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    display: block;
+    position: relative;
   }
 
-  .product-card:hover {
-    transform: scale(1.02);
-    z-index: 10;
-  }
+  .nx-card-1 .nx-card-img { min-height: 680px; }
+  .nx-card-2 .nx-card-img { min-height: 340px; }
 
-  /* Background Image */
-  .card-bg {
+  .nx-card-img-inner {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
-    transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
-    z-index: 0;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  .card-bg img {
+  .nx-card:hover .nx-card-img-inner {
+    transform: scale(1.06);
+  }
+
+  .nx-card-img-inner img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
 
-  .product-card:hover .card-bg {
-    transform: scale(1.08);
-  }
-
-  /* Gradient Overlay */
-  .card-overlay {
+  /* Overlay gradient on cards */
+  .nx-card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      to top,
-      rgba(10, 30, 48, 0.95) 0%,
-      rgba(10, 30, 48, 0.6) 40%,
-      rgba(10, 30, 48, 0.1) 70%,
-      transparent 100%
-    );
-    z-index: 1;
+    background: linear-gradient(to top, rgba(10,18,28,0.92) 0%, rgba(10,18,28,0.3) 45%, rgba(10,18,28,0.05) 100%);
+    z-index: 2;
     transition: background 0.4s ease;
   }
 
-  .product-card:hover .card-overlay {
-    background: linear-gradient(
-      to top,
-      rgba(10, 30, 48, 0.98) 0%,
-      rgba(10, 30, 48, 0.75) 50%,
-      rgba(10, 30, 48, 0.2) 80%,
-      transparent 100%
-    );
+  .nx-card:hover .nx-card-overlay {
+    background: linear-gradient(to top, rgba(10,18,28,0.97) 0%, rgba(10,18,28,0.5) 55%, rgba(10,18,28,0.1) 100%);
   }
 
-  /* Badge */
-  .card-badge {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    z-index: 10;
-    padding: 6px 16px;
-    font-family: var(--font-body, sans-serif);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    border: 1px solid currentColor;
-    backdrop-filter: blur(8px);
-  }
-
-  .badge-recommended {
-    background: rgba(199, 154, 74, 0.2);
-    color: #E2B86A;
-    border-color: #C79A4A;
-  }
-
-  .badge-new {
-    background: rgba(15, 118, 110, 0.3);
-    color: #5eead4;
-    border-color: #0F766E;
-  }
-
-  /* Card Content */
-  .card-content {
+  /* Card content */
+  .nx-card-content {
     position: absolute;
     bottom: 0;
-    left: 0;
     right: 0;
-    z-index: 10;
-    padding: 32px 28px;
-    transform: translateY(0);
-    transition: transform 0.4s ease;
+    left: 0;
+    padding: 2rem 1.8rem;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
   }
 
-  .card-number {
-    font-family: var(--font-heading);
-    font-size: 0.7rem;
+  .nx-card-3 .nx-card-content {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 2.5rem 2.5rem;
+  }
+
+  .nx-card-tag {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
     letter-spacing: 0.3em;
-    color: #E2B86A;
-    opacity: 0.8;
-    margin-bottom: 10px;
     text-transform: uppercase;
-  }
-
-  .card-title {
-    font-family: var(--font-heading);
-    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-    font-weight: 700;
-    color: var(--text-light);
-    margin: 0 0 16px;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-  }
-
-  .product-card:nth-child(1) .card-title {
-    font-size: clamp(1.8rem, 3vw, 2.5rem);
-  }
-
-  /* Gold Divider Line */
-  .card-divider {
-    width: 40px;
-    height: 2px;
-    background: var(--gradient-gold-accent);
-    margin-bottom: 18px;
-    transition: width 0.4s ease;
-  }
-
-  .product-card:hover .card-divider {
-    width: 80px;
-  }
-
-  /* Card Actions */
-  .card-actions {
+    color: #C79A4A;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+    gap: 0.5rem;
   }
 
-  .product-card:hover .card-actions {
-    opacity: 1;
-    transform: translateY(0);
+  .nx-card-tag::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 1px;
+    background: #C79A4A;
   }
 
-  .card-link {
+  .nx-card-title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 300;
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+
+  .nx-card-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: #E2B86A;
-    text-decoration: none;
-    font-family: var(--font-body, sans-serif);
-    font-size: 0.85rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
+    gap: 0.5rem;
+    color: #C79A4A;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 0.3rem;
+    position: relative;
+    width: fit-content;
     transition: gap 0.3s ease;
   }
 
-  .card-link:hover {
-    gap: 14px;
-  }
-
-  .card-link svg {
-    flex-shrink: 0;
-  }
-
-  /* Icons Row */
-  .card-icons {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-    opacity: 0.6;
-  }
-
-  .card-icon {
-    width: 20px;
-    height: 20px;
-    color: #E2B86A;
-  }
-
-  /* Vertical Label for large card */
-  .card-vertical-label {
-    position: absolute;
-    left: -16px;
-    top: 50%;
-    transform: translateY(-50%) rotate(-90deg);
-    font-family: var(--font-body, sans-serif);
-    font-size: 0.6rem;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: rgba(246, 240, 230, 0.3);
-    white-space: nowrap;
-    z-index: 10;
-    pointer-events: none;
-  }
-
-  /* Decorative corner */
-  .card-corner {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 60px;
-    z-index: 2;
-    pointer-events: none;
-  }
-
-  .card-corner::before {
+  .nx-card-link::after {
     content: '';
     position: absolute;
-    bottom: 0; left: 0;
-    border-bottom: 60px solid rgba(199, 154, 74, 0.12);
-    border-right: 60px solid transparent;
+    bottom: -2px;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #C79A4A);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
   }
 
-  /* Bottom accent strip */
-  .products-footer {
-    margin-top: 48px;
+  .nx-card:hover .nx-card-link::after {
+    transform: scaleX(1);
+  }
+
+  .nx-card:hover .nx-card-link {
+    gap: 0.8rem;
+  }
+
+  .nx-card-link svg {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.3s ease;
+  }
+
+  .nx-card:hover .nx-card-link svg {
+    transform: translateX(-4px);
+  }
+
+  /* Card 3 special wide layout */
+  .nx-card-3-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .nx-card-3-meta {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 24px;
-  }
-
-  .footer-line {
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border-light));
-  }
-
-  .footer-line:last-child {
-    background: linear-gradient(90deg, var(--border-light), transparent);
-  }
-
-  .footer-logo-text {
-    font-family: var(--font-heading);
-    font-size: 0.75rem;
-    letter-spacing: 0.5em;
+    gap: 2rem;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: rgba(199,154,74,0.6);
     text-transform: uppercase;
-    color: var(--text-muted);
   }
 
-  /* ── RESPONSIVE ── */
+  /* Dividers between cards */
+  .nx-card-1 { border-right: 1px solid rgba(199,154,74,0.12); }
+  .nx-card-2 { border-bottom: 1px solid rgba(199,154,74,0.12); }
+
+  /* Gold shine decoration */
+  .nx-gold-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 60%;
+    background: linear-gradient(to bottom, transparent, rgba(199,154,74,0.3), transparent);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Floating number badges */
+  .nx-card-num {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    font-family: var(--font-heading);
+    font-size: 0.68rem;
+    color: rgba(199,154,74,0.5);
+    letter-spacing: 0.25em;
+    z-index: 5;
+    font-weight: 300;
+  }
+
+  /* === BOTTOM DECORATIVE BAND === */
+  .nx-bottom-band {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid rgba(199,154,74,0.15);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .nx-bottom-item {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: rgba(246,240,230,0.3);
+    text-transform: uppercase;
+  }
+
+  .nx-bottom-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(199,154,74,0.35);
+  }
+
+  /* === BACKGROUND DECOR === */
+  .nx-bg-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .nx-bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(199,154,74,0.06);
+  }
+
+  .nx-bg-circle-1 {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    right: -200px;
+  }
+
+  .nx-bg-circle-2 {
+    width: 400px;
+    height: 400px;
+    bottom: 100px;
+    left: -150px;
+  }
+
+  /* === RESPONSIVE === */
   @media (max-width: 900px) {
-    .products-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-    }
-    .product-card:nth-child(1) {
-      grid-column: 1 / -1;
-      grid-row: 1;
-      min-height: 420px;
-      border-left: none;
-      border-bottom: 4px solid var(--bg-light);
-    }
-    .product-card:nth-child(2) {
-      grid-column: 1;
-      grid-row: 2;
-      min-height: 380px;
-    }
-    .product-card:nth-child(3) {
-      grid-column: 2;
-      grid-row: 2;
-      min-height: 380px;
-    }
-    .card-actions {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (max-width: 600px) {
-    .products-section {
-      padding: 100px 0 70px;
-    }
-    .products-grid {
+    .nx-grid {
       grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      padding: 0 1rem 3rem;
     }
-    .product-card:nth-child(1),
-    .product-card:nth-child(2),
-    .product-card:nth-child(3) {
+
+    .nx-card-1 {
       grid-column: 1;
-      min-height: 420px;
-      border-left: none;
-      border-right: none;
-      border-bottom: 4px solid var(--bg-light);
+      grid-row: 1;
     }
-    .products-header {
+
+    .nx-card-2 {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    .nx-card-3 {
+      grid-column: 1;
+      grid-row: 3;
+    }
+
+    .nx-card-1 { border-right: none; border-bottom: 1px solid rgba(199,154,74,0.12); }
+
+    .nx-card-1 .nx-card-img { min-height: 480px; }
+    .nx-card-2 .nx-card-img { min-height: 320px; }
+
+    .nx-header-band {
+      padding-top: 110px;
+    }
+
+    .nx-card-3 .nx-card-content {
       flex-direction: column;
       align-items: flex-start;
-      gap: 20px;
     }
-    .products-title {
-      font-size: 2.2rem;
-    }
-    .card-actions {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  }
+
+  @media (max-width: 480px) {
+    .nx-header-band { padding-top: 100px; padding-left: 1rem; padding-right: 1rem; }
+    .nx-card-1 .nx-card-img { min-height: 380px; }
+    .nx-card-3 { min-height: 300px; }
+    .nx-bottom-band { gap: 1.5rem; flex-wrap: wrap; }
+  }
+
+  /* Hover shimmer */
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .nx-card-link:hover {
+    background: var(--gradient-gold-shine);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 1.5s linear infinite;
   }
 </style>
 
-<div class="products-section">
-  <div class="products-container">
+<div class="nx-products-section">
 
-    <!-- Header -->
-    <div class="products-header">
-      <h1 class="products-title">
-        <span>Newton Luxury</span>
-        המוצרים שלנו
-      </h1>
-      <button class="filter-btn" aria-label="סינון מוצרים">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 4h18M7 12h10M10 20h4"></path></svg>
-        <span>סינון</span>
-      </button>
+  <!-- Background decoration -->
+  <div class="nx-bg-decor">
+    <div class="nx-bg-circle nx-bg-circle-1"></div>
+    <div class="nx-bg-circle nx-bg-circle-2"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="nx-header-band">
+    <div class="nx-eyebrow">
+      <svg class="nx-filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2l1.5 4.5h4.5l-3.5 2.8 1.3 4.2-3.8-2.7L8 13.5l1.3-4.2L5.8 6.5h4.5z"></path>
+      </svg>
+      קולקציית יוקרה
+      <svg class="nx-filter-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2l1.5 4.5h4.5l-3.5 2.8 1.3 4.2-3.8-2.7L8 13.5l1.3-4.2L5.8 6.5h4.5z"></path>
+      </svg>
     </div>
+    <h1 class="nx-main-title">
+      <span>Newton Luxury</span>
+      המוצרים שלנו
+    </h1>
+    <button class="nx-filter-btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="4" y1="6" x2="20" y2="6"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="11" y1="18" x2="13" y2="18"></line>
+      </svg>
+      סינון
+    </button>
+  </div>
 
-    <!-- Grid -->
-    <div class="products-grid">
+  <!-- Product Grid -->
+  <div class="nx-grid">
 
-      <!-- Card 1 — Large Feature Card -->
-      <div class="product-card" role="article">
-        <div class="card-bg">
+    <!-- Card 1 — tall -->
+    <div class="nx-card nx-card-1">
+      <div class="nx-card-img" style="position:relative;">
+        <div class="nx-card-img-inner">
           <img alt="מזוודה יחודית" style="width:100%;height:100%;object-fit:cover;display:block;" src="/assets/product-enhanced-1773834191646-hp1etg.webp" data-zappy-editable-image="true">
         </div>
-        <div class="card-overlay"></div>
-        <div class="card-corner"></div>
-
-        <!-- Badge -->
-        <div class="card-badge badge-recommended" aria-label="מומלץ">
-          <!-- Star icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-left:5px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-          מומלץ
-        </div>
-
-        <div class="card-content">
-          <div class="card-number">01 — קולקציה בלעדית</div>
-          <div class="card-icons" aria-hidden="true">
-            <!-- 7 icons for card 1 -->
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"></circle><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path></svg>
-          </div>
-          <div class="card-divider"></div>
-          <h3 class="card-title">מזוודה יחודית</h3>
-          <div class="card-actions">
-            <a href="#" class="card-link" aria-label="לפרטים על מזוודה יחודית">
-              לפרטים
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-            </a>
-          </div>
-        </div>
+        <div class="nx-card-overlay"></div>
       </div>
+      <span class="nx-card-num">01 — קולקציה בלעדית</span>
+      <div class="nx-card-content">
+        <div class="nx-card-tag">בלעדי</div>
+        <h3 class="nx-card-title">מזוודה יחודית</h3>
+        <a href="#" class="nx-card-link">
+          לפרטים
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M19 12H5M12 5l-7 7 7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
 
-      <!-- Card 2 -->
-      <div class="product-card" role="article">
-        <div class="card-bg">
+    <!-- Card 2 — top -->
+    <div class="nx-card nx-card-2">
+      <div class="nx-card-img" style="position:relative;">
+        <div class="nx-card-img-inner">
           <img alt="מזוודה מיוחדת" style="width:100%;height:100%;object-fit:cover;display:block;" src="/assets/product-1773834090551-uolxw.webp" data-zappy-editable-image="true">
         </div>
-        <div class="card-overlay"></div>
-        <div class="card-corner"></div>
-
-        <div class="card-badge badge-recommended" aria-label="מומלץ">
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="currentColor" viewBox="0 0 24 24" style="vertical-align:middle;margin-left:5px;"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-          מומלץ
-        </div>
-
-        <div class="card-content">
-          <div class="card-number">02 — קולקציה</div>
-          <div class="card-icons" aria-hidden="true">
-            <!-- 6 icons for card 2 -->
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"></circle><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3"></path></svg>
-          </div>
-          <div class="card-divider"></div>
-          <h3 class="card-title">מזוודה מיוחדת</h3>
-          <div class="card-actions">
-            <a href="#" class="card-link" aria-label="לפרטים על מזוודה מיוחדת">
-              לפרטים
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-            </a>
-          </div>
-        </div>
+        <div class="nx-card-overlay"></div>
       </div>
+      <span class="nx-card-num">02 — קולקציה</span>
+      <div class="nx-card-content">
+        <div class="nx-card-tag">קולקציה</div>
+        <h3 class="nx-card-title">מזוודה מיוחדת</h3>
+        <a href="#" class="nx-card-link">
+          לפרטים
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M19 12H5M12 5l-7 7 7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
 
-      <!-- Card 3 -->
-      <div class="product-card" role="article">
-        <div class="card-bg">
-          <img alt="ISAAC" style="width:100%;height:100%;object-fit:cover;display:block;" src="/assets/product-1773833808022-ck7zv4.webp" data-zappy-editable-image="true">
+    <!-- Card 3 — full width banner -->
+    <div class="nx-card nx-card-3">
+      <div class="nx-card-img" style="position:relative;min-height:380px;">
+        <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773833808022-ck7zv4.webp'); position:absolute;inset:0;background-size:cover;background-position:center top;transition:transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);"></div>
+        <div class="nx-card-overlay" style="background:linear-gradient(to right, rgba(10,18,28,0.88) 0%, rgba(10,18,28,0.5) 55%, rgba(10,18,28,0.1) 100%);"></div>
+      </div>
+      <span class="nx-card-num">03 — בלעדי</span>
+      <div class="nx-card-content">
+        <div class="nx-card-3-text">
+          <div class="nx-card-3-meta">
+            <span>NEWTON LUXURY</span>
+            <span>✦</span>
+            <span>בלעדי</span>
+          </div>
+          <h3 class="nx-card-title" style="font-size:clamp(1.8rem,4vw,3rem);">ISAAC</h3>
         </div>
-        <div class="card-overlay"></div>
-        <div class="card-corner"></div>
+        <a href="#" class="nx-card-link" style="margin-top:0;">
+          לפרטים
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M19 12H5M12 5l-7 7 7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
 
-        <div class="card-badge badge-new" aria-label="חדש">
-          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-left:5px;"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-          חדש
-        </div>
+  </div>
 
-        <div class="card-content">
-          <div class="card-number">03 — בלעדי</div>
-          <div class="card-icons" aria-hidden="true">
-            <!-- 6 icons for card 3 -->
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-            <svg class="card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg></div></div></div></div></div></div></section>
+  <!-- Bottom band -->
+  <div class="nx-bottom-band">
+    <span class="nx-bottom-item">Newton Luxury</span>
+    <div class="nx-bottom-dot"></div>
+    <span class="nx-bottom-item">קולקציה בלעדית</span>
+    <div class="nx-bottom-dot"></div>
+    <span class="nx-bottom-item">מוצרי יוקרה</span>
+    <div class="nx-bottom-dot"></div>
+    <span class="nx-bottom-item">עיצוב קלאסי</span>
+  </div>
+
+</div>
+</section>
 
 
 
