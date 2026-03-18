@@ -9827,6 +9827,29 @@ footer, footer * {
   height: 100%;
 }
 
+.zappy-catalog-section .zappy-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.zappy-catalog-section .zappy-products-grid .zappy-product-card {
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+.zappy-catalog-section .zappy-products-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 600px) {
+.zappy-catalog-section .zappy-products-grid {
+  grid-template-columns: 1fr;
+}
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
