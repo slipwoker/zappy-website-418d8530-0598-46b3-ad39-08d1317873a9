@@ -9738,6 +9738,18 @@ footer, footer * {
   font-family: 'Assistant', sans-serif;
 }
 
+#temp-section-1773833785786 .product-stars {
+  display: none;
+}
+
+#temp-section-1773833785786 .product-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  display: block;
+  margin-top: 4px;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
