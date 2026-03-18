@@ -9788,6 +9788,26 @@ footer, footer * {
 }
 }
 
+.newton-products-section .np-card-img-wrap {
+  height: 320px;
+}
+
+.newton-products-section .np-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+.newton-products-section .np-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.newton-products-section .np-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
