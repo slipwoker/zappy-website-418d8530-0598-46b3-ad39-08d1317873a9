@@ -5860,7 +5860,7 @@ body.accessibility-widget-visible ._access-menu {
 .index-hero-section__btn--primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 34px rgba(0,0,0,0.32);
-  background: #1a4a43;
+  background: #0f2a44;
 }
 
 .index-hero-section__btn--secondary {
@@ -5948,10 +5948,7 @@ body.accessibility-widget-visible ._access-menu {
   margin-top: 0;
   padding-top: 0;
 }
-/* === BUTTON TEXT OVERRIDES START === */
-.navbar .nav-cta-btn,
-.nav-cta-btn { color: #FFFFFF !important; }
-/* === BUTTON TEXT OVERRIDES END === */
+
 
 
 400;500;600;700&display=swap');
@@ -7080,10 +7077,10 @@ main.page-container.ecommerce-page,
   text-transform: uppercase;
 }
 .status-pending { background: #fef3c7; color: #92400e; }
-.status-paid { background: #d1fae5; color: #065f46; }
+.status-paid { background: #d1fae5; color: #0F766E; }
 .status-processing { background: #dbeafe; color: #1e40af; }
 .status-shipped { background: #e0e7ff; color: #3730a3; }
-.status-delivered { background: #d1fae5; color: #065f46; }
+.status-delivered { background: #d1fae5; color: #0F766E; }
 .status-cancelled { background: #fee2e2; color: #991b1b; }
 .order-info-row {
   display: flex;
@@ -7298,7 +7295,7 @@ main.page-container.ecommerce-page,
   transition: opacity 0.3s;
 }
 .toast.show { opacity: 1; }
-.toast.success { background: #059669; color: #fff; }
+.toast.success { background: #0F766E; color: #fff; }
 .toast.error { background: #dc2626; color: #fff; }
 
 @media (max-width: 640px) {
@@ -7318,7 +7315,7 @@ main.page-container.ecommerce-page,
 }
 .order-success-container { max-width: 600px; margin: 0 auto; text-align: center; }
 .order-success-icon { margin-bottom: 24px; }
-.order-success-icon svg { color: #10b981; stroke: #10b981; }
+.order-success-icon svg { color: #0F766E; stroke: #0F766E; }
 .order-success-section h1 { font-size: 2.5rem; color: var(--text-light); margin-bottom: 8px; }
 .order-success-subtitle { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 32px; }
 .order-number-box {
@@ -7440,7 +7437,7 @@ main.page-container.ecommerce-page,
   color: var(--text-light);
 }
 .product-info .product-stock { display: flex; align-items: center; gap: 8px; font-weight: 500; }
-.product-info .product-stock.in-stock { color: #10b981; }
+.product-info .product-stock.in-stock { color: #0F766E; }
 .product-info .product-stock.out-of-stock { color: #ef4444; }
 .product-info .product-stock.low-stock { color: #f59e0b; }
 .product-stock svg {
@@ -7692,7 +7689,7 @@ main.page-container.ecommerce-page,
 }
 .coupon-badge {
   background: #d1fae5;
-  color: #065f46;
+  color: #0F766E;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -7711,7 +7708,7 @@ main.page-container.ecommerce-page,
   font-size: 0.85rem;
   margin-top: 8px;
 }
-.discount-row { color: #059669; }
+.discount-row { color: #0F766E; }
 
 /* Cart drawer */
 .cart-drawer-overlay {
@@ -8069,7 +8066,7 @@ main.page-container.ecommerce-page,
   color: #fff !important; 
 }
 .cart-link.nav-cart:hover .cart-count { 
-  background: #fff !important; 
+  background: #F6F0E6 !important; 
   color: var(--accent, #FF2DAA) !important; 
 }
 
@@ -9487,7 +9484,7 @@ main,
   color: var(--text-light) !important; 
 }
 .shipping-free-note { 
-  color: #10b981 !important; 
+  color: #0F766E !important; 
   font-size: 14px !important; 
   margin-top: 4px !important; 
   font-weight: 500 !important; 
@@ -9500,7 +9497,7 @@ main,
   flex-shrink: 0 !important;
 }
 .shipping-price.free { 
-  color: #10b981 !important; 
+  color: #0F766E !important; 
 }
 .no-shipping, #shipping-methods .error { 
   text-align: center !important; 
@@ -9759,6 +9756,11 @@ main,
 }
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
+/* === BUTTON TEXT OVERRIDES START === */
+.navbar .nav-cta-btn,
+.nav-cta-btn { color: #FFFFFF !important; }
+/* === BUTTON TEXT OVERRIDES END === */
+
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
