@@ -1428,40 +1428,558 @@ html[dir="rtl"] body {
     </nav>
   <main class="page-container ecommerce-page">
     
-        <section class="products-section" id="temp-section-1774363665337">
-          <h1 data-i18n="products_h1_1">המוצרים שלנו</h1>
-          <div class="products-toolbar" id="products-toolbar" style="display:none;">
-            <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" style="display:none;" aria-label="סינון" data-i18n="products_btn_24">
-              <svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h4"></path></svg>
-              <span data-i18n="products_span_8">סינון</span>
+        <section style="width:100%;max-width:100%;box-sizing:border-box;background:var(--bg-light);position:relative;overflow:visible;padding-bottom:0;" data-zappy-section="true" class="section" id="temp-section-1774363665337">
+<style>
+  .products-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: var(--gradient-light-section);
+    font-family: var(--font-heading);
+    direction: rtl;
+    position: relative;
+  }
+
+  .products-header {
+    position: relative;
+    width: 100%;
+    background: var(--bg-dark);
+    overflow: hidden;
+    padding: 80px 0 60px;
+  }
+
+  .products-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-dark-section);
+    z-index: 0;
+  }
+
+  .products-header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .products-title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .products-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.8;
+  }
+
+  .products-main-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 300;
+    color: var(--text-light);
+    line-height: 0.9;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  .products-main-title span {
+    display: block;
+    background: var(--gradient-gold-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .products-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .products-count {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-light);
+    opacity: 0.5;
+    letter-spacing: 0.1em;
+  }
+
+  .filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: transparent;
+    border: 1px solid rgba(102,255,255,0.4);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    padding: 0.7rem 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+  }
+
+  .filter-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 0;
+  }
+
+  .filter-btn:hover::before {
+    transform: translateX(0);
+  }
+
+  .filter-btn:hover {
+    color: var(--primary);
+  }
+
+  .filter-btn span,
+  .filter-btn svg {
+    position: relative;
+    z-index: 1;
+  }
+
+  .diagonal-divider {
+    width: 100%;
+    height: 60px;
+    background: var(--bg-dark);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+    margin-top: -1px;
+  }
+
+  .products-grid-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem 6rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5px;
+    position: relative;
+  }
+
+  .product-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: #0a1a2a;
+  }
+
+  .product-card:first-child {
+    grid-row: 1 / 3;
+  }
+
+  .product-card-bg {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .product-card:first-child .product-card-bg {
+    min-height: 720px;
+  }
+
+  .product-card:hover .product-card-bg {
+    transform: scale(1.05);
+  }
+
+  .product-card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .product-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10,26,42,0.9) 0%, rgba(10,26,42,0.3) 50%, rgba(10,26,42,0.0) 100%);
+    z-index: 2;
+    transition: background 0.4s ease;
+  }
+
+  .product-card:hover .product-card-overlay {
+    background: linear-gradient(to top, rgba(10,26,42,0.95) 0%, rgba(10,26,42,0.5) 60%, rgba(10,26,42,0.1) 100%);
+  }
+
+  .product-card-content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 2rem 1.8rem;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .product-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 2px;
+    align-self: flex-start;
+    font-weight: 600;
+  }
+
+  .product-badge.recommended {
+    background: var(--gradient-gold-accent);
+    color: #fff;
+  }
+
+  .product-badge.new {
+    background: var(--accent);
+    color: var(--primary);
+  }
+
+  .product-name {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    font-weight: 300;
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .product-card:first-child .product-name {
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+  }
+
+  .product-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+
+  .product-card:hover .product-actions {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .product-action-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-light);
+  }
+
+  .product-action-btn:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--primary);
+  }
+
+  .product-divider-line {
+    width: 40px;
+    height: 1px;
+    background: var(--gradient-gold-accent);
+    transition: width 0.4s ease;
+  }
+
+  .product-card:hover .product-divider-line {
+    width: 80px;
+  }
+
+  .floating-accent {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: var(--gradient-primary);
+    z-index: 5;
+  }
+
+  .products-bottom-bar {
+    width: 100%;
+    background: var(--primary);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .bottom-bar-inner {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .bottom-bar-count {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--text-light);
+    opacity: 0.4;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .bottom-bar-dots {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .bottom-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+  }
+
+  .bottom-dot.active {
+    background: var(--accent);
+    width: 24px;
+    border-radius: 3px;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .shimmer-line {
+    height: 1px;
+    background: var(--gradient-gold-shine);
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+    margin: 0;
+    width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    .products-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+
+    .product-card:first-child {
+      grid-row: 1;
+      grid-column: 1 / 3;
+    }
+
+    .product-card:first-child .product-card-bg {
+      min-height: 420px;
+    }
+
+    .product-card-bg {
+      min-height: 280px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .products-header {
+      padding: 100px 0 50px;
+    }
+
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .product-card:first-child {
+      grid-column: 1;
+    }
+
+    .product-card:first-child .product-card-bg {
+      min-height: 380px;
+    }
+
+    .products-header-inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .product-actions {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<div class="products-section">
+  <!-- Header -->
+  <div class="products-header">
+    <div class="products-header-inner">
+      <div class="products-title-group">
+        <span class="products-eyebrow" data-i18n="new_span_115">NEWTON LUXURY</span>
+        <h1 class="products-main-title" data-i18n="new_h1_116">
+          המוצרים<span data-i18n="new_span_117">שלנו</span>
+        </h1>
+      </div>
+      <div class="products-meta">
+        <span class="products-count" data-i18n="new_span_118">3 מוצרים</span>
+        <button class="filter-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="10" y1="18" x2="14" y2="18"></line></svg>
+          <span data-i18n="products_btn_24">סינון</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="shimmer-line"></div>
+
+  <!-- Diagonal divider -->
+  <div class="diagonal-divider"></div>
+
+  <!-- Products Grid -->
+  <div class="products-grid-wrapper">
+    <div class="products-grid">
+
+      <!-- Card 1 - Large Featured -->
+      <div class="product-card">
+        <div class="product-card-bg" style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-enhanced-1773834191646-hp1etg.webp'); background-size: cover; background-position: center; position: absolute; inset: 0; min-height: unset;">
+        </div>
+        <div style="position:relative;width:100%;padding-top:140%;"></div>
+        <div class="product-card-overlay"></div>
+        <div class="product-card-content">
+          <span class="product-badge recommended">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            מומלץ
+          </span>
+          <div class="product-divider-line"></div>
+          <h3 class="product-name" data-i18n="new_h3_119">מזוודה יחודית</h3>
+          <div class="product-actions">
+            <!-- Icon 1 -->
+            <button class="product-action-btn" aria-label="הוסף לסל">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
             </button>
-            <div class="toolbar-left">
-              <span class="products-count" id="products-count"></span>
-            </div>
-            <div class="toolbar-right">
-              <div class="sort-control" id="sort-control" style="display:none;">
-                <select id="sort-select" aria-label="מיון">
-                </select>
-              </div>
-              <div class="view-toggle" id="view-toggle" style="display:none;">
-                <button class="view-btn active" data-view="grid" aria-label="תצוגת רשת">
-                  <svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
-                </button>
-                <button class="view-btn" data-view="list" aria-label="תצוגת רשימה">
-                  <svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"></path></svg>
-                </button>
-              </div>
-            </div>
+            <!-- Icon 2 -->
+            <button class="product-action-btn" aria-label="מועדפים">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+            <!-- Icon 3 -->
+            <button class="product-action-btn" aria-label="פרטים">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
           </div>
-          <div class="products-layout" id="products-layout">
-            <aside class="product-sidebar" id="product-sidebar" style="display:none;"></aside>
-            <div class="products-main">
-              <div class="product-grid" id="zappy-product-grid">
-                <div class="loading-products" data-i18n="products_div_31">טוען מוצרים...</div>
-              </div>
-            </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="product-card">
+        <div class="product-card-bg" style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773834090551-uolxw.webp'); background-size: cover; background-position: center; position: absolute; inset: 0; min-height: unset;">
+        </div>
+        <div style="position:relative;width:100%;padding-top:100%;"></div>
+        <div class="product-card-overlay"></div>
+        <div class="product-card-content">
+          <span class="product-badge recommended">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewbox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            מומלץ
+          </span>
+          <div class="product-divider-line"></div>
+          <h3 class="product-name" data-i18n="new_h3_120">מזוודה מיוחדת</h3>
+          <div class="product-actions">
+            <!-- Icon 4 -->
+            <button class="product-action-btn" aria-label="הוסף לסל">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </button>
+            <!-- Icon 5 -->
+            <button class="product-action-btn" aria-label="מועדפים">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+            <!-- Icon 6 -->
+            <button class="product-action-btn" aria-label="פרטים">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
           </div>
-        </section>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="product-card">
+        <div class="product-card-bg" style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773833808022-ck7zv4.webp'); background-size: cover; background-position: center; position: absolute; inset: 0; min-height: unset;">
+        </div>
+        <div style="position:relative;width:100%;padding-top:100%;"></div>
+        <div class="product-card-overlay"></div>
+        <div class="product-card-content">
+          <span class="product-badge new">
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            חדש
+          </span>
+          <div class="product-divider-line"></div>
+          <h3 class="product-name" data-i18n="new_h3_121">ISAAC</h3>
+          <div class="product-actions">
+            <!-- Icon 7 -->
+            <button class="product-action-btn" aria-label="הוסף לסל">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </button>
+            <!-- Icon 8 -->
+            <button class="product-action-btn" aria-label="מועדפים">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </button>
+            <!-- Icon 9 -->
+            <button class="product-action-btn" aria-label="פרטים">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="products-bottom-bar">
+    <div class="bottom-bar-inner">
+      <span class="bottom-bar-count" data-i18n="new_span_122">3 מוצרים</span>
+      <div class="bottom-bar-dots">
+        <div class="bottom-dot active"></div>
+        <div class="bottom-dot"></div>
+        <div class="bottom-dot"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
 
 
 <section id="layout-1774363664691" class="layout-section" data-zappy-component="true" style="width: 100%; padding: 60px 0; direction: rtl;" data-component-id="card-accent-top">
@@ -1659,6 +2177,8 @@ html[dir="rtl"] body {
 
 
 
+
+
 <!-- i18next Multi-Language Support -->
 <script>
 (function() {
@@ -1779,9 +2299,13 @@ html[dir="rtl"] body {
       "login_h3_3": "קישורים מהירים",
       "login_h3_4": "יצירת קשר",
       "login_h3_5": "עקבו אחרינו",
+      "new_h1_116": "המוצרים<span>שלנו</span>",
       "new_h3_109": "כותרת כרטיס 1",
       "new_h3_111": "כותרת כרטיס 2",
       "new_h3_113": "כותרת כרטיס 3",
+      "new_h3_119": "מזוודה יחודית",
+      "new_h3_120": "מזוודה מיוחדת",
+      "new_h3_121": "ISAAC",
       "terms_h1_1": "תנאי שימוש",
       "terms_h2_2": "1. הגדרות",
       "terms_h2_3": "2. תיאור השירותים",
@@ -2021,6 +2545,10 @@ html[dir="rtl"] body {
       "login_nav_38": "גלריית מורשת",
       "login_nav_39": "צור קשר",
       "login_nav_40": "כל המוצרים",
+      "new_span_115": "NEWTON LUXURY",
+      "new_span_117": "שלנו",
+      "new_span_118": "3 מוצרים",
+      "new_span_122": "3 מוצרים",
       "privacy_h1_1": "מדיניות פרטיות",
       "privacy_h2_2": "1. איסוף מידע",
       "privacy_h2_3": "2. שימוש במידע",
@@ -3097,9 +3625,13 @@ html[dir="rtl"] body {
       "login_h3_3": "Quick Links",
       "login_h3_4": "Contact",
       "login_h3_5": "Follow Us",
+      "new_h1_116": "המוצרים<span>שלנו</span>",
       "new_h3_109": "Card Title 1",
       "new_h3_111": "Card Title 2",
       "new_h3_113": "Card Title 3",
+      "new_h3_119": "מזוודה יחודית",
+      "new_h3_120": "מזוודה מיוחדת",
+      "new_h3_121": "ISAAC",
       "terms_h1_1": "Terms of Use",
       "terms_h2_2": "1. Definitions",
       "terms_h2_3": "2. Service Description",
@@ -3339,6 +3871,10 @@ html[dir="rtl"] body {
       "login_nav_38": "Heritage Gallery",
       "login_nav_39": "Contact",
       "login_nav_40": "All Products",
+      "new_span_115": "NEWTON LUXURY",
+      "new_span_117": "שלנו",
+      "new_span_118": "3 מוצרים",
+      "new_span_122": "3 מוצרים",
       "privacy_h1_1": "Privacy Policy",
       "privacy_h2_2": "1. Information Collection",
       "privacy_h2_3": "2. Use of Information",
