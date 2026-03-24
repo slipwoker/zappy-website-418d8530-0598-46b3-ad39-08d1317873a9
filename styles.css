@@ -138,19 +138,19 @@
 :root {
 --primary: #0f2a44;
   --secondary: #0a1e30;
-  --accent: #0F766E;
+  --accent: #66FFFF;
   --bg-light: #F6F0E6;
   --bg-dark: #0f2a44;
-  --text-dark: #0a1e30;
+  --text-dark: #4A4A4A;
   --text-light: #F6F0E6;
-  --text-muted: #4B5563;
+  --text-muted: #626262;
   --border-light: #8b857c;
   --border-dark: #678aa9;
   --nav-bg: #0f2a44;
   --nav-text: #F6F0E6;
   --nav-text-hover: #E0B84A;
   
-  --gradient-primary: linear-gradient(180deg, #0E6B64 0%, #153B60 100%);
+  --gradient-primary: linear-gradient(180deg, #5AFFFF 0%, #153B60 100%);
   --gradient-gold-shine: linear-gradient(90deg, rgba(199,154,74,0) 0%, rgba(226,184,106,0.65) 35%, rgba(255,255,255,0.75) 50%, rgba(226,184,106,0.65) 65%, rgba(199,154,74,0) 100%);
   --gradient-secondary: linear-gradient(180deg, #F4ECE2 0%, #E9DCCB 100%);
   --gradient-gold-accent: linear-gradient(135deg, #8F6727 0%, #C79A4A 35%, #E2B86A 60%, #B88B3A 100%);
@@ -168,11 +168,11 @@
   --transition: all 0.3s ease;
   --primary-color: #0f2a44;
   --secondary-color: #0a1e30;
-  --accent-color: #0F766E;
+  --accent-color: #66FFFF;
   --background-color: #F6F0E6;
   --surface-color: #EFE3D4;
-  --text-color: #0a1e30;
-  --text-secondary-color: #4B5563;
+  --text-color: #4A4A4A;
+  --text-secondary-color: #626262;
 }
 
 *, *::before, *::after {
@@ -424,12 +424,12 @@ ul, ol {
   --nav-text-hover: #E0B84A;
   --primary: #0f2a44;
   --secondary: #0a1e30;
-  --accent: #0F766E;
+  --accent: #66FFFF;
   --bg-light: #F6F0E6;
   --bg-dark: #0f2a44;
-  --text-dark: #0a1e30;
+  --text-dark: #4A4A4A;
   --text-light: #F6F0E6;
-  --text-muted: #4B5563;
+  --text-muted: #626262;
   --border-light: #8b857c;
   --border-dark: #678aa9;
 }
@@ -655,12 +655,12 @@ ul, ol {
   --nav-text-hover: #E0B84A;
   --primary: #0f2a44;
   --secondary: #0a1e30;
-  --accent: #0F766E;
+  --accent: #66FFFF;
   --bg-light: #F6F0E6;
   --bg-dark: #0f2a44;
-  --text-dark: #0a1e30;
+  --text-dark: #4A4A4A;
   --text-light: #F6F0E6;
-  --text-muted: #4B5563;
+  --text-muted: #626262;
   --border-light: #8b857c;
   --border-dark: #678aa9;
 }
@@ -1713,12 +1713,12 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 :root {
   --primary: #0f2a44;
   --secondary: #0a1e30;
-  --accent: #0F766E;
+  --accent: #66FFFF;
   --bg-light: #F6F0E6;
   --bg-dark: #0f2a44;
-  --text-dark: #0a1e30;
+  --text-dark: #4A4A4A;
   --text-light: #F6F0E6;
-  --text-muted: #4B5563;
+  --text-muted: #626262;
   --border-light: #8b857c;
   --border-dark: #678aa9;
 }
@@ -2049,7 +2049,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
   right: -8px;
   width: 3px;
   height: 80px;
-  background: linear-gradient(180deg, #0F766E 0%, rgba(15, 118, 110, 0.4) 100%);
+  background: linear-gradient(180deg, #66FFFF 0%, rgba(15, 118, 110, 0.4) 100%);
   border-radius: 2px;
   z-index: 2;
 }
@@ -2482,7 +2482,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .index-cta-section .btn-primary {
-  background: #0F766E;
+  background: #66FFFF;
   color: #F7F1E8;
   padding: 12px 22px;
   border-radius: 2px;
@@ -2499,7 +2499,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .index-cta-section .btn-primary:hover {
-  background: #0F766E;
+  background: #66FFFF;
   box-shadow: 0 12px 30px rgba(0,0,0,0.30);
   transform: translateY(-2px);
 }
@@ -3268,7 +3268,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .about-cta-section .btn-primary {
-  background: #0F766E;
+  background: #66FFFF;
   color: #F7F1E8;
   padding: 12px 22px;
   border-radius: 2px;
@@ -3285,7 +3285,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .about-cta-section .btn-primary:hover {
-  background: #0F766E;
+  background: #66FFFF;
   box-shadow: 0 14px 32px rgba(0,0,0,0.30);
   transform: translateY(-2px);
 }
@@ -3683,7 +3683,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 
 .btn-editorial {
   display: inline-block;
-  background: #0F766E;
+  background: #66FFFF;
   color: #F7F1E8;
   padding: 12px 22px;
   border-radius: 2px;
@@ -3985,7 +3985,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 
 .gallery-cta-section .btn-primary {
   display: inline-block;
-  background: #0F766E;
+  background: #66FFFF;
   color: #F7F1E8;
   padding: 12px 32px;
   border-radius: 2px;
@@ -4001,7 +4001,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .gallery-cta-section .btn-primary:hover {
-  background: #0F766E;
+  background: #66FFFF;
   box-shadow: 0 14px 32px rgba(0,0,0,0.35);
   transform: translateY(-2px);
 }
@@ -4244,7 +4244,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .contact-contact-section .contact-submit-btn {
-  background: #0F766E;
+  background: #66FFFF;
   color: #F7F1E8;
   padding: 14px 28px;
   border-radius: 2px;
@@ -4264,7 +4264,7 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
 }
 
 .contact-contact-section .contact-submit-btn:hover {
-  background: #0F766E;
+  background: #66FFFF;
   box-shadow: 0 14px 32px rgba(0,0,0,0.3);
   transform: translateY(-2px);
 }
@@ -7077,10 +7077,10 @@ main.page-container.ecommerce-page,
   text-transform: uppercase;
 }
 .status-pending { background: #fef3c7; color: #92400e; }
-.status-paid { background: #d1fae5; color: #0F766E; }
+.status-paid { background: #d1fae5; color: #007a7a; }
 .status-processing { background: #dbeafe; color: #1e40af; }
 .status-shipped { background: #e0e7ff; color: #3730a3; }
-.status-delivered { background: #d1fae5; color: #0F766E; }
+.status-delivered { background: #d1fae5; color: #007a7a; }
 .status-cancelled { background: #fee2e2; color: #991b1b; }
 .order-info-row {
   display: flex;
@@ -7295,7 +7295,7 @@ main.page-container.ecommerce-page,
   transition: opacity 0.3s;
 }
 .toast.show { opacity: 1; }
-.toast.success { background: #0F766E; color: #fff; }
+.toast.success { background: #66FFFF; color: #fff; }
 .toast.error { background: #dc2626; color: #fff; }
 
 @media (max-width: 640px) {
@@ -7315,7 +7315,7 @@ main.page-container.ecommerce-page,
 }
 .order-success-container { max-width: 600px; margin: 0 auto; text-align: center; }
 .order-success-icon { margin-bottom: 24px; }
-.order-success-icon svg { color: #0F766E; stroke: #0F766E; }
+.order-success-icon svg { color: #007a7a; stroke: #66FFFF; }
 .order-success-section h1 { font-size: 2.5rem; color: var(--text-light); margin-bottom: 8px; }
 .order-success-subtitle { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 32px; }
 .order-number-box {
@@ -7437,7 +7437,7 @@ main.page-container.ecommerce-page,
   color: var(--text-light);
 }
 .product-info .product-stock { display: flex; align-items: center; gap: 8px; font-weight: 500; }
-.product-info .product-stock.in-stock { color: #0F766E; }
+.product-info .product-stock.in-stock { color: #007a7a; }
 .product-info .product-stock.out-of-stock { color: #ef4444; }
 .product-info .product-stock.low-stock { color: #f59e0b; }
 .product-stock svg {
@@ -7689,7 +7689,7 @@ main.page-container.ecommerce-page,
 }
 .coupon-badge {
   background: #d1fae5;
-  color: #0F766E;
+  color: #007a7a;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -7708,7 +7708,7 @@ main.page-container.ecommerce-page,
   font-size: 0.85rem;
   margin-top: 8px;
 }
-.discount-row { color: #0F766E; }
+.discount-row { color: #007a7a; }
 
 /* Cart drawer */
 .cart-drawer-overlay {
@@ -9484,7 +9484,7 @@ main,
   color: var(--text-light) !important; 
 }
 .shipping-free-note { 
-  color: #0F766E !important; 
+  color: #007a7a !important; 
   font-size: 14px !important; 
   margin-top: 4px !important; 
   font-weight: 500 !important; 
@@ -9497,7 +9497,7 @@ main,
   flex-shrink: 0 !important;
 }
 .shipping-price.free { 
-  color: #0F766E !important; 
+  color: #007a7a !important; 
 }
 .no-shipping, #shipping-methods .error { 
   text-align: center !important; 
@@ -9756,7 +9756,13 @@ main,
 }
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
+
+
 /* === BUTTON TEXT OVERRIDES START === */
+.btn-accent,
+.btn--accent,
+[class*="btn-accent"],
+[class*="btn--accent"] { color: #333333 !important; }
 .navbar .nav-cta-btn,
 .nav-cta-btn { color: #FFFFFF !important; }
 /* === BUTTON TEXT OVERRIDES END === */
