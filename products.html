@@ -1339,515 +1339,612 @@ html[dir="rtl"] body {
     </style>
 </head>
 <body>
-<section style="width:100%;max-width:100%;box-sizing:border-box;background:var(--bg-light);direction:rtl;font-family:var(--font-heading);overflow:hidden;" data-zappy-section="true" class="section" id="temp-section-1774363665337">
+<section style="width:100%;max-width:100%;box-sizing:border-box;background:var(--bg-dark);overflow:hidden;position:relative;direction:rtl;" data-zappy-section="true" class="section" id="temp-section-1774363665337">
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
   .products-section {
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
-    background: var(--bg-light);
-    position: relative;
-  }
-
-  .products-header {
-    background: var(--bg-dark);
-    padding: 80px 0 60px;
+    background: var(--gradient-dark-section);
     position: relative;
     overflow: hidden;
-    text-align: center;
+    font-family: var(--font-heading);
   }
 
-  .products-header::before {
-    content: '';
+  /* HERO BANNER */
+  .ps-hero {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .ps-hero-bg {
     position: absolute;
     inset: 0;
-    background: var(--gradient-dark-section);
     z-index: 0;
+    background-size: cover;
+    background-position: center;
   }
 
-  .products-header-bg-strip {
+  .ps-hero-overlay {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    opacity: 0.08;
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(80px, 18vw, 220px);
-    font-family: var(--font-heading);
-    color: var(--accent);
-    font-weight: 700;
-    letter-spacing: -0.05em;
-    pointer-events: none;
-    user-select: none;
-    white-space: nowrap;
-    overflow: hidden;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(11,23,35,0.3) 0%, rgba(11,23,35,0.85) 70%, rgba(11,23,35,1) 100%);
   }
 
-  .products-header-content {
+  .ps-hero-content {
     position: relative;
     z-index: 10;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    text-align: center;
+    padding: 0 2rem 4rem;
+    width: 100%;
   }
 
-  .products-header-eyebrow {
+  .ps-brand-badge {
     display: inline-block;
-    color: var(--accent);
+    letter-spacing: 0.4em;
     font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.25em;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
     text-transform: uppercase;
-    margin-bottom: 1rem;
-    padding: 6px 18px;
-    border: 1px solid rgba(102,255,255,0.35);
-    border-radius: 100px;
+    border: 1px solid var(--accent);
+    padding: 0.4em 1.2em;
+    margin-bottom: 1.2rem;
+    opacity: 0.9;
   }
 
-  .products-header h1 {
+  .ps-hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    font-weight: 700;
     color: var(--text-light);
-    margin: 0 0 1rem;
-    line-height: 1.05;
-    font-weight: 400;
+    margin: 0 0 0.5rem;
+    line-height: 0.95;
     letter-spacing: -0.02em;
   }
 
-  .products-header h1 span {
-    color: var(--accent);
+  .ps-hero-title span {
+    display: block;
+    background: var(--gradient-gold-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  .products-meta-bar {
+  .ps-hero-subtitle {
+    font-family: var(--font-body);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    color: rgba(246,240,230,0.65);
+    max-width: 520px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+  }
+
+  /* FILTER BAR */
+  .ps-filter-bar {
+    position: relative;
+    z-index: 20;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.2rem 1.5rem;
-    background: var(--bg-light);
-    border-bottom: 1px solid var(--border-light);
-    gap: 1rem;
-    flex-wrap: wrap;
+    padding: 1.5rem 3rem;
+    background: rgba(15,42,68,0.6);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(102,255,255,0.12);
+    border-bottom: 1px solid rgba(102,255,255,0.12);
   }
 
-  .products-count {
+  .ps-filter-label {
     font-family: var(--font-body);
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    color: rgba(246,240,230,0.4);
+    text-transform: uppercase;
   }
 
-  .filter-btn {
+  .ps-filter-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: var(--primary);
-    color: var(--text-light);
-    border: none;
-    padding: 10px 24px;
+    gap: 0.6rem;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
     font-family: var(--font-body);
-    font-size: 0.85rem;
-    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
+    padding: 0.65em 1.8em;
     cursor: pointer;
-    border-radius: 4px;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
   }
 
-  .filter-btn::after {
+  .ps-filter-btn::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: var(--gradient-gold-shine);
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    z-index: -1;
   }
 
-  .filter-btn:hover {
-    background: var(--secondary);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(15,42,68,0.35);
+  .ps-filter-btn:hover::before { transform: scaleX(1); }
+  .ps-filter-btn:hover { color: var(--primary); }
+
+  .ps-filter-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
   }
 
-  .filter-btn:hover::after {
-    opacity: 0.5;
+  .ps-filter-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.45;
+    color: var(--text-light);
+    transition: opacity 0.2s;
+    cursor: pointer;
   }
+  .ps-filter-icon:hover { opacity: 1; }
 
-  .products-grid {
-    max-width: 1200px;
+  /* PRODUCT GRID */
+  .ps-grid-wrapper {
+    padding: 4rem 2rem 6rem;
+    max-width: 1340px;
     margin: 0 auto;
-    padding: 3rem 1.5rem 5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 1.5rem;
   }
 
-  .product-card {
+  .ps-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    position: relative;
+  }
+
+  /* CARD BASE */
+  .ps-card {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 6px;
-    box-shadow: 0 4px 24px rgba(15,42,68,0.1);
-    transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.4s ease;
   }
 
-  .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgba(15,42,68,0.22);
+  .ps-card:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .ps-card:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: 4rem;
+  }
+  .ps-card:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
   }
 
-  .product-card--featured {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 55% 45%;
-  }
-
-  .product-card--tall {
-    min-height: 520px;
-  }
-
-  .product-card__image-wrap {
+  .ps-card-inner {
     position: relative;
     overflow: hidden;
-    min-height: 400px;
   }
 
-  .product-card--featured .product-card__image-wrap {
-    min-height: 500px;
-  }
-
-  .product-card__image-wrap [data-preserve-bg] {
+  .ps-card-bg {
     width: 100%;
-    height: 100%;
-    min-height: inherit;
-    transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
+    min-height: 480px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  .product-card:hover .product-card__image-wrap [data-preserve-bg] {
-    transform: scale(1.04);
+  .ps-card:hover .ps-card-bg {
+    transform: scale(1.06);
   }
 
-  .product-card__overlay {
+  .ps-card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(11,23,35,0) 40%, rgba(11,23,35,0.75) 100%);
-    z-index: 2;
+    background: linear-gradient(180deg, transparent 30%, rgba(11,23,35,0.92) 100%);
+    z-index: 1;
     transition: background 0.4s ease;
   }
 
-  .product-card:hover .product-card__overlay {
-    background: linear-gradient(180deg, rgba(11,23,35,0) 20%, rgba(11,23,35,0.85) 100%);
+  .ps-card:hover .ps-card-overlay {
+    background: linear-gradient(180deg, rgba(11,23,35,0.15) 0%, rgba(11,23,35,0.95) 100%);
   }
 
-  .product-card__content {
+  /* CARD INFO */
+  .ps-card-info {
     position: absolute;
     bottom: 0;
-    right: 0;
     left: 0;
-    padding: 2rem 1.5rem 1.8rem;
+    right: 0;
     z-index: 10;
-    text-align: right;
+    padding: 2rem 1.8rem;
+    transform: translateY(0);
   }
 
-  .product-card--featured .product-card__content {
-    position: relative;
-    background: var(--bg-dark);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3rem 2.5rem;
-    text-align: right;
-  }
-
-  .product-card__brand {
-    display: block;
+  .ps-card-tag {
+    display: inline-block;
     font-family: var(--font-body);
-    font-size: 0.7rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
     color: var(--accent);
+    text-transform: uppercase;
     margin-bottom: 0.6rem;
-    opacity: 0.85;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.4s ease 0.05s;
   }
 
-  .product-card__title {
+  .ps-card:hover .ps-card-tag {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .ps-card-name {
     font-family: var(--font-heading);
     font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 700;
     color: var(--text-light);
-    margin: 0 0 0.5rem;
-    font-weight: 400;
-    line-height: 1.15;
+    margin: 0 0 0.4rem;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
   }
 
-  .product-card--featured .product-card__title {
-    font-size: clamp(1.8rem, 3vw, 2.8rem);
-    margin-bottom: 1rem;
-  }
-
-  .product-card__desc {
+  .ps-card-sub {
     font-family: var(--font-body);
-    font-size: 0.85rem;
-    color: rgba(246,240,230,0.65);
-    line-height: 1.6;
-    margin-bottom: 1.8rem;
-    display: none;
+    font-size: 0.72rem;
+    color: rgba(246,240,230,0.5);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
   }
 
-  .product-card--featured .product-card__desc {
-    display: block;
-  }
-
-  .product-card__action {
+  .ps-card-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
     font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--accent);
     text-decoration: none;
-    padding-bottom: 3px;
-    border-bottom: 1px solid rgba(102,255,255,0.4);
-    transition: gap 0.3s ease, border-color 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease 0.1s;
+    position: relative;
   }
 
-  .product-card__action:hover {
-    gap: 14px;
-    border-color: var(--accent);
-  }
-
-  .product-card__number {
+  .ps-card-link::after {
+    content: '';
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    bottom: -2px;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+  }
+
+  .ps-card-link:hover::after { width: 100%; }
+
+  .ps-card:hover .ps-card-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* CARD NUMBER */
+  .ps-card-number {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
     z-index: 10;
     font-family: var(--font-heading);
-    font-size: 0.7rem;
-    color: rgba(246,240,230,0.4);
-    letter-spacing: 0.15em;
-  }
-
-  .product-card__badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 10;
-    background: var(--accent);
-    color: var(--primary);
-    font-family: var(--font-body);
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 100px;
-    font-weight: 700;
-  }
-
-  .icon-wrap {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Floating luxury label */
-  .luxury-label {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--primary);
-    color: var(--accent);
-    font-family: var(--font-body);
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    padding: 6px 20px;
-    white-space: nowrap;
-    z-index: 20;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(102,255,255,0.08);
+    line-height: 1;
+    transition: color 0.4s ease;
     pointer-events: none;
   }
 
-  /* Icons strip */
-  .icons-strip {
+  .ps-card:hover .ps-card-number {
+    color: rgba(102,255,255,0.15);
+  }
+
+  /* FEATURED CARD */
+  .ps-card-featured-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 10;
+    background: var(--gradient-gold-accent);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 0.58rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 0.4em 0.9em;
+  }
+
+  /* DIVIDER LINE */
+  .ps-card-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(102,255,255,0.15) 50%, transparent);
+    right: 0;
+    z-index: 5;
+  }
+
+  /* BOTTOM STRIPE */
+  .ps-bottom-stripe {
+    padding: 2.5rem 3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 1.2rem 1.5rem;
-    background: var(--primary);
-    max-width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid rgba(102,255,255,0.08);
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+
+  .ps-stripe-brand {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    background: var(--gradient-gold-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .ps-stripe-text {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    color: rgba(246,240,230,0.35);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .ps-stripe-icons {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+
+  .ps-stripe-icon {
+    width: 16px;
+    height: 16px;
+    color: rgba(246,240,230,0.3);
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+  .ps-stripe-icon:hover { color: var(--accent); }
+
+  /* MARQUEE */
+  .ps-marquee-wrap {
     overflow: hidden;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(102,255,255,0.06);
+    border-bottom: 1px solid rgba(102,255,255,0.06);
+    background: rgba(10,30,48,0.5);
   }
 
-  .icons-strip svg, .icons-strip i, .icons-strip span {
-    color: rgba(246,240,230,0.4);
-    opacity: 0.6;
-    font-size: 1rem;
-    transition: opacity 0.3s ease, color 0.3s ease;
+  .ps-marquee-track {
+    display: flex;
+    gap: 0;
+    animation: marqueeRTL 28s linear infinite;
+    white-space: nowrap;
   }
 
-  .icons-strip svg:hover, .icons-strip i:hover {
-    opacity: 1;
-    color: var(--accent);
+  @keyframes marqueeRTL {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
 
+  .ps-marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(246,240,230,0.25);
+  }
+
+  .ps-marquee-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.4;
+    flex-shrink: 0;
+  }
+
+  /* RESPONSIVE */
   @media (max-width: 900px) {
-    .products-grid {
-      grid-template-columns: 1fr;
+    .ps-grid {
+      grid-template-columns: 1fr 1fr;
     }
-    .product-card--featured {
-      grid-column: 1;
-      grid-template-columns: 1fr;
+    .ps-card:nth-child(3) {
+      grid-column: 1 / 3;
     }
-    .product-card--featured .product-card__content {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      background: transparent;
-      padding: 1.5rem;
-    }
-    .product-card--featured .product-card__desc {
-      display: none;
-    }
-    .product-card--featured .product-card__title {
-      font-size: 1.8rem;
-    }
+    .ps-card:nth-child(2) { margin-top: 0; }
+    .ps-filter-bar { padding: 1.2rem 1.5rem; }
   }
 
-  @media (max-width: 768px) {
-    .products-header {
-      padding-top: 100px;
+  @media (max-width: 600px) {
+    .ps-grid {
+      grid-template-columns: 1fr;
     }
-    .products-grid {
-      padding: 2rem 1rem 3rem;
-      gap: 1rem;
+    .ps-card:nth-child(1),
+    .ps-card:nth-child(2),
+    .ps-card:nth-child(3) {
+      grid-column: 1;
+      grid-row: auto;
+      margin-top: 0;
     }
-    .product-card__image-wrap {
-      min-height: 300px;
-    }
+    .ps-grid-wrapper { padding: 2rem 1rem 4rem; }
+    .ps-filter-bar { flex-wrap: wrap; gap: 1rem; }
+    .ps-bottom-stripe { flex-wrap: wrap; gap: 1rem; padding: 1.5rem; }
+    .ps-hero { min-height: 50vh; }
+    .ps-hero-content { padding: 0 1.5rem 3rem; }
+    .ps-card-link { opacity: 1; transform: none; }
+    .ps-card-tag { opacity: 1; transform: none; }
   }
 </style>
 
 <div class="products-section">
 
-  <!-- DRAMATIC HEADER -->
-  <div class="products-header">
-    <div class="products-header-bg-strip" data-i18n="cart_alt_43">NEWTON</div>
-    <div class="products-header-content">
-      <span class="products-header-eyebrow" data-i18n="new_span_115">NEWTON LUXURY</span>
-      <h1 data-i18n="new_h1_116">המוצרים<span data-i18n="new_span_117">שלנו</span></h1>
+  <!-- HERO BANNER -->
+  <div class="ps-hero">
+    <div class="ps-hero-bg" style="background-image: url('assets/business-general-hero-upload-1774364341269-xrgxqv.webp?v=1774364343457');  background-size: cover; background-position: center;"></div>
+    <div class="ps-hero-overlay"></div>
+    <div class="ps-hero-content">
+      <div class="ps-brand-badge" data-i18n="new_span_115">NEWTON LUXURY</div>
+      <h1 class="ps-hero-title" data-i18n="new_h1_116">
+        המוצרים<span data-i18n="new_span_117">שלנו</span>
+      </h1>
+      <p class="ps-hero-subtitle" data-i18n="new_p_157">NEWTON LUXURY — עיצוב ייחודי בהשראת הגדולים, מחומרים נבחרים בעבודת יד. חוויית נסיעה שאין כמוה.</p>
     </div>
   </div>
 
-  <!-- META BAR -->
-  <div class="products-meta-bar">
-    <span class="products-count">
-      <!-- icon 0 -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-left:4px;color:var(--text-muted);" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
-      3 מוצרים
-    </span>
-    <button class="filter-btn">
-      <!-- icon 1 -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="12" y1="18" x2="12" y2="18"></line></svg>
+  <!-- MARQUEE -->
+  <div class="ps-marquee-wrap">
+    <div class="ps-marquee-track" data-i18n="new_div_159">
+      <span class="ps-marquee-item" data-i18n="cart_alt_43">NEWTON<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_115">NEWTON LUXURY<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_156">LUXURY<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_115">NEWTON LUXURY<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_158">NEW<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_115">NEWTON LUXURY<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_115">NEWTON LUXURY<span class="ps-marquee-dot"></span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="ps-marquee-item" data-i18n="cart_alt_43">NEWTON<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_115">NEWTON LUXURY<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_156">LUXURY<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_115">NEWTON LUXURY<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_158">NEW<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_115">NEWTON LUXURY<span class="ps-marquee-dot"></span></span>
+      <span class="ps-marquee-item" data-i18n="new_span_115">NEWTON LUXURY<span class="ps-marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- FILTER BAR -->
+  <div class="ps-filter-bar">
+    <div class="ps-filter-label" data-i18n="new_div_160">NEWTON LUXURY — קולקציה</div>
+    <button class="ps-filter-btn">
+      <svg width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="11" y1="18" x2="13" y2="18"></line></svg>
       סינון
     </button>
+    <div class="ps-filter-icons">
+      <!-- Icons 1–6 of 13 in filter area -->
+      <svg class="ps-filter-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+      <svg class="ps-filter-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg class="ps-filter-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      <svg class="ps-filter-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <svg class="ps-filter-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 01-8 0"></path></svg>
+      <svg class="ps-filter-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"></path></svg>
+    </div>
   </div>
 
-  <!-- PRODUCTS GRID -->
-  <div class="products-grid">
+  <!-- PRODUCT GRID -->
+  <div class="ps-grid-wrapper">
+    <div class="ps-grid">
 
-    <!-- FEATURED CARD (Image 0) -->
-    <div class="product-card product-card--featured product-card--tall">
-      <div class="product-card__image-wrap">
-        <div style="background-image: url('assets/business-general-hero-upload-1774364341269-xrgxqv.webp?v=1774364343457'); background-size:cover;background-position:center;min-height:500px;width:100%;height:100%;"></div>
-        <div class="product-card__overlay"></div>
-        <span class="product-card__number">01</span>
-        <span class="product-card__badge" data-i18n="new_span_156">LUXURY</span>
-      </div>
-      <div class="product-card__content">
-        <span class="product-card__brand" data-i18n="new_span_115">NEWTON LUXURY</span>
-        <h3 class="product-card__title" data-i18n="new_h3_119">מזוודה יחודית</h3>
-        <p class="product-card__desc" data-i18n="new_p_157">NEWTON LUXURY — עיצוב ייחודי בהשראת הגדולים, מחומרים נבחרים בעבודת יד. חוויית נסיעה שאין כמוה.</p>
-        <a href="#" class="product-card__action">
-          <!-- icon 2 -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          גלה עוד
-        </a>
-      </div>
-    </div>
-
-    <!-- CARD 2 (Image 1) -->
-    <div class="product-card product-card--tall">
-      <div class="product-card__image-wrap">
-        <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-enhanced-1773834191646-hp1etg.webp'); background-size:cover;background-position:center;min-height:400px;width:100%;height:100%;"></div>
-        <div class="product-card__overlay"></div>
-        <span class="product-card__number">02</span>
-      </div>
-      <div class="product-card__content">
-        <span class="product-card__brand" data-i18n="new_span_115">NEWTON LUXURY</span>
-        <h3 class="product-card__title" data-i18n="new_h3_120">מזוודה מיוחדת</h3>
-        <a href="#" class="product-card__action">
-          <!-- icon 3 -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          גלה עוד
-        </a>
-      </div>
-    </div>
-
-    <!-- CARD 3 (Image 2) -->
-    <div class="product-card product-card--tall">
-      <div class="product-card__image-wrap">
-        <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773834090551-uolxw.webp'); background-size:cover;background-position:center;min-height:400px;width:100%;height:100%;"></div>
-        <div class="product-card__overlay"></div>
-        <span class="product-card__number">03</span>
-        <span class="product-card__badge" style="background:var(--primary);color:var(--accent);border:1px solid rgba(102,255,255,0.4);" data-i18n="new_span_158">NEW</span>
-      </div>
-      <div class="product-card__content">
-        <span class="product-card__brand" data-i18n="new_span_115">NEWTON LUXURY</span>
-        <h3 class="product-card__title" data-i18n="new_h3_121">ISAAC</h3>
-        <a href="#" class="product-card__action">
-          <!-- icon 4 -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          גלה עוד
-        </a>
-      </div>
-    </div>
-
-    <!-- CARD 4 (Image 3) - hidden card or accent panel -->
-    <div class="product-card" style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;min-height:220px;border-radius:6px;overflow:hidden;">
-      <div style="background:var(--bg-dark);display:flex;flex-direction:column;justify-content:center;padding:2.5rem 2rem;text-align:right;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;right:0;bottom:0;left:0;background:var(--gradient-dark-section);z-index:0;"></div>
-        <div style="position:relative;z-index:10;">
-          <span style="display:block;font-family:var(--font-body);font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-bottom:0.8rem;opacity:0.75;" data-i18n="new_span_115">NEWTON LUXURY</span>
-          <p style="font-family:var(--font-heading);font-size:clamp(1.4rem,2.5vw,2rem);color:var(--text-light);margin:0 0 1.2rem;font-weight:400;line-height:1.2;" data-i18n="new_span_115">
-            NEWTON LUXURY
-          </p>
-          <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-            <!-- icons 5–12 -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+      <!-- CARD 1 -->
+      <div class="ps-card">
+        <div class="ps-card-number">01</div>
+        <div class="ps-card-inner">
+          <div class="ps-card-bg" style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-enhanced-1773834191646-hp1etg.webp');  background-size: cover; background-position: center;"></div>
+          <div class="ps-card-overlay"></div>
+          <div class="ps-card-divider"></div>
+          <div class="ps-card-info">
+            <span class="ps-card-tag" data-i18n="new_span_115">NEWTON LUXURY</span>
+            <h3 class="ps-card-name" data-i18n="new_h3_119">מזוודה יחודית</h3>
+            <p class="ps-card-sub" data-i18n="new_span_115">NEWTON LUXURY</p>
+            <a href="#" class="ps-card-link">
+              גלה עוד
+              <svg width="12" height="12" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
           </div>
         </div>
       </div>
-      <div style="position:relative;overflow:hidden;min-height:220px;">
-        <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773833808022-ck7zv4.webp'); background-size:cover;background-position:center;width:100%;height:100%;min-height:220px;transition:transform 0.6s ease;"></div>
-        <div style="position:absolute;inset:0;background:linear-gradient(270deg,rgba(11,23,35,0) 50%,rgba(11,23,35,0.6) 100%);z-index:2;"></div>
-      </div>
-    </div>
 
+      <!-- CARD 2 -->
+      <div class="ps-card">
+        <div class="ps-card-featured-badge" data-i18n="new_span_158">NEW</div>
+        <div class="ps-card-number">02</div>
+        <div class="ps-card-inner">
+          <div class="ps-card-bg" style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773834090551-uolxw.webp');  background-size: cover; background-position: center;"></div>
+          <div class="ps-card-overlay"></div>
+          <div class="ps-card-divider"></div>
+          <div class="ps-card-info">
+            <span class="ps-card-tag" data-i18n="new_span_115">NEWTON LUXURY</span>
+            <h3 class="ps-card-name" data-i18n="new_h3_120">מזוודה מיוחדת</h3>
+            <p class="ps-card-sub" data-i18n="new_span_115">NEWTON LUXURY</p>
+            <a href="#" class="ps-card-link">
+              גלה עוד
+              <svg width="12" height="12" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="ps-card">
+        <div class="ps-card-number">03</div>
+        <div class="ps-card-inner">
+          <div class="ps-card-bg" style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773833808022-ck7zv4.webp');  background-size: cover; background-position: center;"></div>
+          <div class="ps-card-overlay"></div>
+          <div class="ps-card-info">
+            <span class="ps-card-tag" data-i18n="new_span_115">NEWTON LUXURY</span>
+            <h3 class="ps-card-name" data-i18n="new_h3_121">ISAAC</h3>
+            <p class="ps-card-sub" data-i18n="new_span_115">NEWTON LUXURY</p>
+            <a href="#" class="ps-card-link">
+              גלה עוד
+              <svg width="12" height="12" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
+
+  <!-- BOTTOM STRIPE -->
+  <div class="ps-bottom-stripe">
+    <div class="ps-stripe-brand" data-i18n="cart_alt_43">NEWTON</div>
+    <div class="ps-stripe-text" data-i18n="new_div_161">NEWTON LUXURY — עבודת יד מחומרים נבחרים</div>
+    <div class="ps-stripe-icons">
+      <!-- Remaining icons 7–13 -->
+      <svg class="ps-stripe-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+      <svg class="ps-stripe-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+      <svg class="ps-stripe-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"></path><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+      <svg class="ps-stripe-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path></svg>
+      <svg class="ps-stripe-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path></svg>
+      <svg class="ps-stripe-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .82h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path></svg>
+      <svg class="ps-stripe-icon" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+    </div>
+  </div>
+
 </div>
 </section>
 
@@ -2185,6 +2282,8 @@ html[dir="rtl"] body {
 
 
 
+
+
 <!-- i18next Multi-Language Support -->
 <script>
 (function() {
@@ -2415,6 +2514,9 @@ html[dir="rtl"] body {
       "new_div_136": "הכי פופולרי",
       "new_div_138": "₪99<span style=\"font-size: 16px; font-weight: 400; color: white; opacity: 0.8;\" data-i18n=\"new_span_139\">/חודש</span>",
       "new_div_146": "₪99<span style=\"font-size: 16px; font-weight: 400; color: #4A4A4A; opacity: 0.6;\" data-i18n=\"new_span_147\">/חודש</span>",
+      "new_div_159": "<span class=\"ps-marquee-item\">NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">יוקרה<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">חדש<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <!-- duplicate for seamless loop -->\n      <span class=\"ps-marquee-item\">NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">יוקרה<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">חדש<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>",
+      "new_div_160": "NEWTON LUXURY — קולקציה",
+      "new_div_161": "NEWTON LUXURY — עבודת יד מחומרים נבחרים",
       "terms_h2_10": "9. שינוי תנאי השימוש",
       "terms_h2_11": "10. סיום השירות",
       "terms_h2_12": "11. דין חל ויישוב סכסוכים",
@@ -3777,6 +3879,9 @@ html[dir="rtl"] body {
       "new_div_136": "Most Popular",
       "new_div_138": "₪99<span style=\"font-size: 16px; font-weight: 400; color: white; opacity: 0.8;\">/month</span>",
       "new_div_146": "₪99<span style=\"font-size: 16px; font-weight: 400; color: #4A4A4A; opacity: 0.6;\">/month</span>",
+      "new_div_159": "<span class=\"ps-marquee-item\">NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEW<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <!-- duplicate for seamless loop -->\n      <span class=\"ps-marquee-item\">NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEW<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>",
+      "new_div_160": "NEWTON LUXURY — קולקציה",
+      "new_div_161": "NEWTON LUXURY — עבודת יד מחומרים נבחרים",
       "terms_h2_10": "9. Changes to Terms of Use",
       "terms_h2_11": "10. Service Termination",
       "terms_h2_12": "11. Applicable Law and Dispute Resolution",
