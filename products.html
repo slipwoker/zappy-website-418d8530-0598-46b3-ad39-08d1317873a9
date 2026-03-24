@@ -1339,417 +1339,514 @@ html[dir="rtl"] body {
     </style>
 </head>
 <body>
-<section style="width: 100%; max-width: 100%; box-sizing: border-box; background-attachment: ; background-origin: ; background-clip: ; background-color: ; position: relative; overflow: hidden; padding-bottom: 0px; direction: rtl; background-image: url(&quot;assets/business-general-hero-upload-1774364341269-xrgxqv.webp?v=1774364343457&quot;) !important; background-size: cover; background-position: 52% 79% !important; background-repeat: no-repeat; --zappy-bg-overlay: rgba(0, 0, 0, 0.28); --zappy-bg-image: url(&quot;assets/business-general-hero-upload-1774364004389.webp&quot;); cursor: url(&quot;data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29.2344 9.93125L4.87351 34.2922C4.67351 34.4922 4.52976 34.7437 4.46101 35.0203L1.60789 46.4984C1.47664 47.0312 1.63289 47.5922 2.02039 47.9797C2.40945 48.3688 2.97351 48.5219 3.50164 48.3922L14.9798 45.5406C15.2548 45.4719 15.5063 45.3297 15.7079 45.1281L40.0688 20.7672L29.2344 9.93125Z' fill='%23FF0083'/%3E%3Cpath d='M46.1937 3.80781C43.2062 0.820311 38.3468 0.820311 35.3578 3.80781L31.4421 7.72344L42.2781 18.5594L46.1937 14.6437C49.1812 11.6547 49.1812 6.79531 46.1937 3.80781Z' fill='%23FF0083'/%3E%3C/svg%3E&quot;) 2 13, pointer !important;" data-zappy-section="true" class="section" id="temp-section-1774363665337" data-zappy-bg-type="image" data-zappy-bg-color="" data-zappy-bg-image="assets/business-general-hero-upload-1774364004389.webp" data-zappy-bg-overlay-color="#000000" data-zappy-bg-overlay-opacity="28" data-zappy-bg-video-type="" data-zappy-bg-video-url="" data-element-id="zappy-hero-bg-temp-section-1774363665337" data-element-type="background-image" data-component-id="basic-two-columns" data-zappy-component="true">
+<section style="width:100%;max-width:100%;box-sizing:border-box;background:var(--bg-light);direction:rtl;font-family:var(--font-heading);overflow:hidden;" data-zappy-section="true" class="section" id="temp-section-1774363665337">
 <style>
-  .shop-hero {
-    position:relative;
-    width:100%;
-    min-height:60vh;
-    display:flex;
-    align-items:flex-end;
-    overflow:hidden;
+  .products-section {
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--bg-light);
+    position: relative;
   }
-  .shop-hero-bg {
-    position:absolute;
-    inset:0;
-    z-index:0;
+
+  .products-header {
+    background: var(--bg-dark);
+    padding: 80px 0 60px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
   }
-  .shop-hero-bg [data-preserve-bg] {
-    width:100%;
-    height:100%;
-    position:absolute;
-    inset:0;
+
+  .products-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-dark-section);
+    z-index: 0;
   }
-  .shop-hero-overlay {
-    position:absolute;
-    inset:0;
-    background:linear-gradient(180deg, rgba(11,23,35,0.18) 0%, rgba(11,23,35,0.72) 100%);
-    z-index:1;
+
+  .products-header-bg-strip {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    opacity: 0.08;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(80px, 18vw, 220px);
+    font-family: var(--font-heading);
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
   }
-  .shop-hero-content {
-    position:relative;
-    z-index:10;
-    width:100%;
-    max-width:1200px;
-    margin:0 auto;
-    padding:2.5rem 2rem 3rem 2rem;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-end;
-    gap:0.7rem;
+
+  .products-header-content {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
   }
-  .shop-hero-brand {
-    font-family:var(--font-body);
-    font-size:0.78rem;
-    letter-spacing:0.28em;
-    color:var(--accent);
-    text-transform:uppercase;
-    opacity:0.92;
+
+  .products-header-eyebrow {
+    display: inline-block;
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding: 6px 18px;
+    border: 1px solid rgba(102,255,255,0.35);
+    border-radius: 100px;
   }
-  .shop-hero-title {
-    font-family:var(--font-heading);
-    font-size:clamp(3rem,8vw,7rem);
-    color:#fff;
-    line-height:0.9;
-    margin:0;
-    font-weight:400;
-    letter-spacing:-0.01em;
-    text-shadow:0 4px 40px rgba(0,0,0,0.35);
+
+  .products-header h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    color: var(--text-light);
+    margin: 0 0 1rem;
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -0.02em;
   }
-  .shop-hero-title span {
-    color:var(--accent);
+
+  .products-header h1 span {
+    color: var(--accent);
   }
-  .shop-meta-bar {
-    width:100%;
-    background:var(--primary);
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 2rem;
-    gap:1rem;
-    z-index:10;
-    position:relative;
-    flex-wrap:wrap;
+
+  .products-meta-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.2rem 1.5rem;
+    background: var(--bg-light);
+    border-bottom: 1px solid var(--border-light);
+    gap: 1rem;
+    flex-wrap: wrap;
   }
-  .shop-meta-count {
-    font-family:var(--font-heading);
-    font-size:1.05rem;
-    color:var(--accent);
-    letter-spacing:0.08em;
-    padding:1rem 0;
+
+  .products-count {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
   }
-  .shop-filter-btn {
-    display:flex;
-    align-items:center;
-    gap:0.5rem;
-    background:transparent;
-    border:1.5px solid var(--accent);
-    color:var(--accent);
-    font-family:var(--font-heading);
-    font-size:1rem;
-    letter-spacing:0.12em;
-    padding:0.6rem 1.6rem;
-    cursor:pointer;
-    transition:all 0.3s ease;
-    border-radius:0;
-    position:relative;
-    overflow:hidden;
+
+  .filter-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 24px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
   }
-  .shop-filter-btn::before {
-    content:'';
-    position:absolute;
-    inset:0;
-    background:var(--accent);
-    transform:scaleX(0);
-    transform-origin:right;
-    transition:transform 0.35s ease;
-    z-index:0;
+
+  .filter-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-gold-shine);
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
-  .shop-filter-btn:hover::before {
-    transform:scaleX(1);
-    transform-origin:left;
+
+  .filter-btn:hover {
+    background: var(--secondary);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(15,42,68,0.35);
   }
-  .shop-filter-btn:hover {
-    color:var(--primary);
+
+  .filter-btn:hover::after {
+    opacity: 0.5;
   }
-  .shop-filter-btn span, .shop-filter-btn svg {
-    position:relative;
-    z-index:1;
+
+  .products-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
   }
-  .shop-products-section {
-    background:var(--bg-light);
-    padding:4rem 2rem 5rem;
-    position:relative;
-    z-index:2;
+
+  .product-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 4px 24px rgba(15,42,68,0.1);
+    transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.4s ease;
   }
-  .shop-products-grid {
-    max-width:1200px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:0;
-    position:relative;
+
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(15,42,68,0.22);
   }
-  .shop-product-card {
-    position:relative;
-    overflow:hidden;
-    cursor:pointer;
-    background:#fff;
+
+  .product-card--featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 55% 45%;
   }
-  .shop-product-card:nth-child(1) {
-    grid-column:1/2;
-    grid-row:1/2;
+
+  .product-card--tall {
+    min-height: 520px;
   }
-  .shop-product-card:nth-child(2) {
-    grid-column:2/3;
-    grid-row:1/2;
-    margin-top:2.5rem;
+
+  .product-card__image-wrap {
+    position: relative;
+    overflow: hidden;
+    min-height: 400px;
   }
-  .shop-product-card:nth-child(3) {
-    grid-column:3/4;
-    grid-row:1/2;
+
+  .product-card--featured .product-card__image-wrap {
+    min-height: 500px;
   }
-  .shop-product-img-wrap {
-    position:relative;
-    width:100%;
-    overflow:hidden;
+
+  .product-card__image-wrap [data-preserve-bg] {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
   }
-  .shop-product-img-wrap [data-preserve-bg] {
-    width:100%;
-    min-height:420px;
-    transition:transform 0.7s cubic-bezier(.23,1,.32,1);
-    background-size:cover;
-    background-position:center;
+
+  .product-card:hover .product-card__image-wrap [data-preserve-bg] {
+    transform: scale(1.04);
   }
-  .shop-product-card:hover .shop-product-img-wrap [data-preserve-bg] {
-    transform:scale(1.07);
+
+  .product-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11,23,35,0) 40%, rgba(11,23,35,0.75) 100%);
+    z-index: 2;
+    transition: background 0.4s ease;
   }
-  .shop-product-img-shine {
-    position:absolute;
-    inset:0;
-    background:var(--gradient-gold-shine);
-    opacity:0;
-    transition:opacity 0.5s ease;
-    pointer-events:none;
-    z-index:2;
+
+  .product-card:hover .product-card__overlay {
+    background: linear-gradient(180deg, rgba(11,23,35,0) 20%, rgba(11,23,35,0.85) 100%);
   }
-  .shop-product-card:hover .shop-product-img-shine {
-    opacity:0.35;
+
+  .product-card__content {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 2rem 1.5rem 1.8rem;
+    z-index: 10;
+    text-align: right;
   }
-  .shop-product-number {
-    position:absolute;
-    top:1.2rem;
-    left:1.2rem;
-    font-family:var(--font-heading);
-    font-size:4rem;
-    color:rgba(255,255,255,0.13);
-    font-weight:400;
-    line-height:1;
-    z-index:3;
-    pointer-events:none;
-    transition:color 0.3s;
+
+  .product-card--featured .product-card__content {
+    position: relative;
+    background: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 2.5rem;
+    text-align: right;
   }
-  .shop-product-card:hover .shop-product-number {
-    color:rgba(102,255,255,0.22);
+
+  .product-card__brand {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+    opacity: 0.85;
   }
-  .shop-product-info {
-    padding:1.5rem 1.5rem 2rem;
-    background:#fff;
-    position:relative;
-    z-index:3;
-    border-top:2px solid transparent;
-    transition:border-color 0.3s ease;
+
+  .product-card__title {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    color: var(--text-light);
+    margin: 0 0 0.5rem;
+    font-weight: 400;
+    line-height: 1.15;
   }
-  .shop-product-card:hover .shop-product-info {
-    border-top-color:var(--accent);
+
+  .product-card--featured .product-card__title {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    margin-bottom: 1rem;
   }
-  .shop-product-name {
-    font-family:var(--font-heading);
-    font-size:1.45rem;
-    color:var(--primary);
-    font-weight:400;
-    margin:0 0 0.4rem;
-    letter-spacing:0.01em;
+
+  .product-card__desc {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: rgba(246,240,230,0.65);
+    line-height: 1.6;
+    margin-bottom: 1.8rem;
+    display: none;
   }
-  .shop-product-sub {
-    font-family:var(--font-body);
-    font-size:0.75rem;
-    color:var(--text-muted);
-    letter-spacing:0.18em;
-    text-transform:uppercase;
+
+  .product-card--featured .product-card__desc {
+    display: block;
   }
-  .shop-product-icons {
-    display:flex;
-    gap:0.7rem;
-    margin-top:1.1rem;
-    align-items:center;
-    flex-wrap:wrap;
+
+  .product-card__action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(102,255,255,0.4);
+    transition: gap 0.3s ease, border-color 0.3s ease;
   }
-  .shop-product-icon-btn {
-    width:36px;height:36px;
-    display:flex;align-items:center;justify-content:center;
-    border:1.5px solid var(--border-light);
-    border-radius:50%;
-    background:transparent;
-    cursor:pointer;
-    transition:all 0.25s ease;
-    color:var(--text-muted);
+
+  .product-card__action:hover {
+    gap: 14px;
+    border-color: var(--accent);
   }
-  .shop-product-icon-btn:hover {
-    background:var(--primary);
-    border-color:var(--primary);
-    color:#fff;
-    transform:translateY(-2px);
+
+  .product-card__number {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    color: rgba(246,240,230,0.4);
+    letter-spacing: 0.15em;
   }
-  .shop-divider-accent {
-    width:40px;height:2px;background:var(--accent);
-    margin:0.5rem 0 1rem;
+
+  .product-card__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    background: var(--accent);
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-weight: 700;
   }
-  @media(max-width:900px){
-    .shop-products-grid{
-      grid-template-columns:1fr 1fr;
-      gap:1.5rem;
+
+  .icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Floating luxury label */
+  .luxury-label {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: var(--accent);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    white-space: nowrap;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  /* Icons strip */
+  .icons-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    background: var(--primary);
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .icons-strip svg, .icons-strip i, .icons-strip span {
+    color: rgba(246,240,230,0.4);
+    opacity: 0.6;
+    font-size: 1rem;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+
+  .icons-strip svg:hover, .icons-strip i:hover {
+    opacity: 1;
+    color: var(--accent);
+  }
+
+  @media (max-width: 900px) {
+    .products-grid {
+      grid-template-columns: 1fr;
     }
-    .shop-product-card:nth-child(1),
-    .shop-product-card:nth-child(2),
-    .shop-product-card:nth-child(3){
-      grid-column:auto;grid-row:auto;margin-top:0;
+    .product-card--featured {
+      grid-column: 1;
+      grid-template-columns: 1fr;
     }
-    .shop-product-card:nth-child(3){
-      grid-column:1/3;
+    .product-card--featured .product-card__content {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: transparent;
+      padding: 1.5rem;
+    }
+    .product-card--featured .product-card__desc {
+      display: none;
+    }
+    .product-card--featured .product-card__title {
+      font-size: 1.8rem;
     }
   }
-  @media(max-width:600px){
-    .shop-hero-content{padding-top:120px;}
-    .shop-products-grid{
-      grid-template-columns:1fr;
+
+  @media (max-width: 768px) {
+    .products-header {
+      padding-top: 100px;
     }
-    .shop-product-card:nth-child(3){
-      grid-column:auto;
+    .products-grid {
+      padding: 2rem 1rem 3rem;
+      gap: 1rem;
     }
-    .shop-meta-bar{padding:0 1rem;}
-    .shop-products-section{padding:2.5rem 1rem 3rem;}
-  }
-  .shop-product-card {
-    box-shadow:0 2px 24px rgba(15,42,68,0.07);
-    transition:box-shadow 0.35s ease, transform 0.35s ease;
-  }
-  .shop-product-card:hover {
-    box-shadow:0 16px 56px rgba(15,42,68,0.16);
-    transform:translateY(-6px);
-  }
-  .shop-section-eyebrow {
-    display:flex;align-items:center;gap:1.2rem;
-    margin-bottom:2.5rem;
-    justify-content:flex-end;
-  }
-  .shop-section-eyebrow-line {
-    flex:1;height:1px;background:var(--border-light);max-width:200px;
-  }
-  .shop-section-eyebrow-text {
-    font-family:var(--font-body);
-    font-size:0.72rem;
-    letter-spacing:0.3em;
-    text-transform:uppercase;
-    color:var(--text-muted);
+    .product-card__image-wrap {
+      min-height: 300px;
+    }
   }
 </style>
 
-<!-- Hero Band -->
-<div class="shop-hero">
-  <div class="shop-hero-bg">
-    <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-enhanced-1773834191646-hp1etg.webp'); background-size:cover;background-position:center;min-height:60vh;width:100%;height:100%;position:absolute;inset:0;"></div>
-  </div>
-  <div class="shop-hero-overlay"></div>
-  <div class="shop-hero-content">
-    <div class="shop-hero-brand" data-i18n="new_span_115">NEWTON LUXURY</div>
-    <h1 class="shop-hero-title" data-i18n="new_h1_116">המוצרים<span data-i18n="new_span_117">שלנו</span></h1>
-  </div>
-</div>
+<div class="products-section">
 
-<!-- Meta / Filter Bar -->
-<div class="shop-meta-bar">
-  <span class="shop-meta-count" data-i18n="new_span_118">3 מוצרים</span>
-  <button class="shop-filter-btn" aria-label="סינון מוצרים">
-    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="11" y1="18" x2="13" y2="18"></line></svg>
-    <span data-i18n="products_btn_24">סינון</span>
-  </button>
-</div>
-
-<!-- Products Grid -->
-<div class="shop-products-section">
-  <div style="max-width:1200px;margin:0 auto;">
-    <div class="shop-section-eyebrow">
-      <p class="zappy-editable" data-i18n="new_span_115"><span class="shop-section-eyebrow-text" data-i18n="new_span_115">NEWTON LUXURY</span>
-      </p><div class="shop-section-eyebrow-line"></div>
+  <!-- DRAMATIC HEADER -->
+  <div class="products-header">
+    <div class="products-header-bg-strip" data-i18n="cart_alt_43">NEWTON</div>
+    <div class="products-header-content">
+      <span class="products-header-eyebrow" data-i18n="new_span_115">NEWTON LUXURY</span>
+      <h1 data-i18n="new_h1_116">המוצרים<span data-i18n="new_span_117">שלנו</span></h1>
     </div>
-    <div class="shop-products-grid">
+  </div>
 
-      <!-- Card 1 -->
-      <div class="shop-product-card">
-        <div class="shop-product-img-wrap">
-          <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-enhanced-1773834191646-hp1etg.webp'); background-size:cover;background-position:center;min-height:420px;"></div>
-          <div class="shop-product-img-shine"></div>
-          <div class="shop-product-number">01</div>
-        </div>
-        <div class="shop-product-info">
-          <div class="shop-divider-accent"></div>
-          <h3 class="shop-product-name" data-i18n="new_h3_119">מזוודה יחודית</h3>
-          <div class="shop-product-sub" data-i18n="new_span_115">NEWTON LUXURY</div>
-          <div class="shop-product-icons">
-            <button class="shop-product-icon-btn" aria-label="הוסף לרשימת משאלות">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </button>
-            <button class="shop-product-icon-btn" aria-label="הוסף לסל">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-            </button>
-            <button class="shop-product-icon-btn" aria-label="השווה">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-            </button>
-            <button class="shop-product-icon-btn" aria-label="תצוגה מהירה">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-          </div>
-        </div>
+  <!-- META BAR -->
+  <div class="products-meta-bar">
+    <span class="products-count">
+      <!-- icon 0 -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-left:4px;color:var(--text-muted);" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
+      3 מוצרים
+    </span>
+    <button class="filter-btn">
+      <!-- icon 1 -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="12" y1="18" x2="12" y2="18"></line></svg>
+      סינון
+    </button>
+  </div>
+
+  <!-- PRODUCTS GRID -->
+  <div class="products-grid">
+
+    <!-- FEATURED CARD (Image 0) -->
+    <div class="product-card product-card--featured product-card--tall">
+      <div class="product-card__image-wrap">
+        <div style="background-image: url('assets/business-general-hero-upload-1774364341269-xrgxqv.webp?v=1774364343457'); background-size:cover;background-position:center;min-height:500px;width:100%;height:100%;"></div>
+        <div class="product-card__overlay"></div>
+        <span class="product-card__number">01</span>
+        <span class="product-card__badge" data-i18n="new_span_156">LUXURY</span>
       </div>
-
-      <!-- Card 2 -->
-      <div class="shop-product-card">
-        <div class="shop-product-img-wrap">
-          <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773834090551-uolxw.webp'); background-size:cover;background-position:center;min-height:420px;"></div>
-          <div class="shop-product-img-shine"></div>
-          <div class="shop-product-number">02</div>
-        </div>
-        <div class="shop-product-info">
-          <div class="shop-divider-accent"></div>
-          <h3 class="shop-product-name" data-i18n="new_h3_120">מזוודה מיוחדת</h3>
-          <div class="shop-product-sub" data-i18n="new_span_115">NEWTON LUXURY</div>
-          <div class="shop-product-icons">
-            <button class="shop-product-icon-btn" aria-label="הוסף לרשימת משאלות">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </button>
-            <button class="shop-product-icon-btn" aria-label="הוסף לסל">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-            </button>
-            <button class="shop-product-icon-btn" aria-label="השווה">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-            </button>
-            <button class="shop-product-icon-btn" aria-label="תצוגה מהירה">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-          </div>
-        </div>
+      <div class="product-card__content">
+        <span class="product-card__brand" data-i18n="new_span_115">NEWTON LUXURY</span>
+        <h3 class="product-card__title" data-i18n="new_h3_119">מזוודה יחודית</h3>
+        <p class="product-card__desc" data-i18n="new_p_157">NEWTON LUXURY — עיצוב ייחודי בהשראת הגדולים, מחומרים נבחרים בעבודת יד. חוויית נסיעה שאין כמוה.</p>
+        <a href="#" class="product-card__action">
+          <!-- icon 2 -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          גלה עוד
+        </a>
       </div>
-
-      <!-- Card 3 -->
-      <div class="shop-product-card">
-        <div class="shop-product-img-wrap">
-          <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773833808022-ck7zv4.webp'); background-size:cover;background-position:center;min-height:420px;"></div>
-          <div class="shop-product-img-shine"></div>
-          <div class="shop-product-number">03</div>
-        </div>
-        <div class="shop-product-info">
-          <div class="shop-divider-accent"></div>
-          <h3 class="shop-product-name" data-i18n="new_h3_121">ISAAC</h3>
-          <div class="shop-product-sub" data-i18n="new_span_115">NEWTON LUXURY</div>
-          <div class="shop-product-icons">
-            <button class="shop-product-icon-btn" aria-label="הוסף לרשימת משאלות">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-            </button>
-            <button class="shop-product-icon-btn" aria-label="הוסף לסל">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-            </button>
-            <button class="shop-product-icon-btn" aria-label="השווה">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-            </button>
-            <button class="shop-product-icon-btn" aria-label="תצוגה מהירה">
-              <svg width="15" height="15" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <!-- CARD 2 (Image 1) -->
+    <div class="product-card product-card--tall">
+      <div class="product-card__image-wrap">
+        <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-enhanced-1773834191646-hp1etg.webp'); background-size:cover;background-position:center;min-height:400px;width:100%;height:100%;"></div>
+        <div class="product-card__overlay"></div>
+        <span class="product-card__number">02</span>
+      </div>
+      <div class="product-card__content">
+        <span class="product-card__brand" data-i18n="new_span_115">NEWTON LUXURY</span>
+        <h3 class="product-card__title" data-i18n="new_h3_120">מזוודה מיוחדת</h3>
+        <a href="#" class="product-card__action">
+          <!-- icon 3 -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          גלה עוד
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 3 (Image 2) -->
+    <div class="product-card product-card--tall">
+      <div class="product-card__image-wrap">
+        <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773834090551-uolxw.webp'); background-size:cover;background-position:center;min-height:400px;width:100%;height:100%;"></div>
+        <div class="product-card__overlay"></div>
+        <span class="product-card__number">03</span>
+        <span class="product-card__badge" style="background:var(--primary);color:var(--accent);border:1px solid rgba(102,255,255,0.4);" data-i18n="new_span_158">NEW</span>
+      </div>
+      <div class="product-card__content">
+        <span class="product-card__brand" data-i18n="new_span_115">NEWTON LUXURY</span>
+        <h3 class="product-card__title" data-i18n="new_h3_121">ISAAC</h3>
+        <a href="#" class="product-card__action">
+          <!-- icon 4 -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          גלה עוד
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 4 (Image 3) - hidden card or accent panel -->
+    <div class="product-card" style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;min-height:220px;border-radius:6px;overflow:hidden;">
+      <div style="background:var(--bg-dark);display:flex;flex-direction:column;justify-content:center;padding:2.5rem 2rem;text-align:right;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;right:0;bottom:0;left:0;background:var(--gradient-dark-section);z-index:0;"></div>
+        <div style="position:relative;z-index:10;">
+          <span style="display:block;font-family:var(--font-body);font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-bottom:0.8rem;opacity:0.75;" data-i18n="new_span_115">NEWTON LUXURY</span>
+          <p style="font-family:var(--font-heading);font-size:clamp(1.4rem,2.5vw,2rem);color:var(--text-light);margin:0 0 1.2rem;font-weight:400;line-height:1.2;" data-i18n="new_span_115">
+            NEWTON LUXURY
+          </p>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+            <!-- icons 5–12 -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="rgba(102,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+          </div>
+        </div>
+      </div>
+      <div style="position:relative;overflow:hidden;min-height:220px;">
+        <div style="background-image: url('/api/website/preview-fullscreen/418d8530-0598-46b3-ad39-08d1317873a9/assets/product-1773833808022-ck7zv4.webp'); background-size:cover;background-position:center;width:100%;height:100%;min-height:220px;transition:transform 0.6s ease;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(270deg,rgba(11,23,35,0) 50%,rgba(11,23,35,0.6) 100%);z-index:2;"></div>
+      </div>
+    </div>
+
   </div>
 </div>
 </section>
@@ -2086,6 +2183,8 @@ html[dir="rtl"] body {
 
 
 
+
+
 <!-- i18next Multi-Language Support -->
 <script>
 (function() {
@@ -2149,6 +2248,7 @@ html[dir="rtl"] body {
       "new_p_124": "טקסט תיאור קצר",
       "new_p_125": "טקסט תיאור קצר",
       "new_p_126": "טקסט תיאור קצר",
+      "new_p_157": "NEWTON LUXURY — עיצוב ייחודי בהשראת הגדולים, מחומרים נבחרים בעבודת יד. חוויית נסיעה שאין כמוה.",
       "about_h2_1": "בית מודרני לנסיעות קלאסיות",
       "about_h2_2": "עקרונות שלא משתנים",
       "about_h2_3": "האנשים מאחורי הסטנדרט",
@@ -2489,6 +2589,8 @@ html[dir="rtl"] body {
       "new_span_130": "/חודש",
       "new_span_139": "/חודש",
       "new_span_147": "/חודש",
+      "new_span_156": "יוקרה",
+      "new_span_158": "חדש",
       "privacy_h1_1": "מדיניות פרטיות",
       "privacy_h2_2": "1. איסוף מידע",
       "privacy_h2_3": "2. שימוש במידע",
@@ -3508,6 +3610,7 @@ html[dir="rtl"] body {
       "new_p_124": "Short description text",
       "new_p_125": "Short description text",
       "new_p_126": "Short description text",
+      "new_p_157": "NEWTON LUXURY — עיצוב ייחודי בהשראת הגדולים, מחומרים נבחרים בעבודת יד. חוויית נסיעה שאין כמוה.",
       "about_h2_1": "A Modern Home for Classic Travel",
       "about_h2_2": "Unchanging Principles",
       "about_h2_3": "The People Behind the Standard",
@@ -3848,6 +3951,8 @@ html[dir="rtl"] body {
       "new_span_130": "/month",
       "new_span_139": "/month",
       "new_span_147": "/month",
+      "new_span_156": "LUXURY",
+      "new_span_158": "NEW",
       "privacy_h1_1": "Privacy Policy",
       "privacy_h2_2": "1. Information Collection",
       "privacy_h2_3": "2. Use of Information",
