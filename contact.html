@@ -1437,14 +1437,14 @@ html[dir="rtl"] body {
 </script>
   
   <main>
-    <section class="contact-intro-section" data-layout-spec="צור קשר-intro">
+    <section class="contact-intro-section" data-layout-spec="צור קשר-intro" id="zappy-section-0">
   <div class="contact-intro-container">
     <div class="contact-intro-content">
       <h2 class="contact-intro-title" data-i18n="contact_h2_1">צור קשר עם NEWTON </h2>
       <p class="contact-intro-text" data-i18n="contact_p_15">פניות לייעוץ, זמינות דגמים, גימורים ומדריכי טיפול – מטופלות באופן דיסקרטי ומקצועי. אנו כאן כדי לסייע לך למצוא את המזוודה המושלמת למסעותיך.</p>
     </div>
     <div class="contact-intro-image-wrapper">
-      <img data-placeholder="contact-intro-image-1" data-context="A refined travel moment: elegant vintage leather suitcase on a marble hotel floor with soft natural light, minimal composition, warm tones, sophisticated atmosphere, premium luggage business" width="1200" height="600" src="/assets/site-contact-intro-image-1.webp" alt="רגע נסיעה מעודן עם מזוודה יוקרתית" data-i18n-alt="contact_alt_76">
+      <div data-zappy-zoom-wrapper="true" data-element-id="img-1774791420709-gi11hi24g" data-element-type="image" data-zappy-zoom-wrapper-width="1000px" data-zappy-zoom-wrapper-height="850px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 1000px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 850px !important; display: block !important;" class="zappy-resizable-hover"><img data-placeholder="contact-intro-image-1" data-context="A refined travel moment: elegant vintage leather suitcase on a marble hotel floor with soft natural light, minimal composition, warm tones, sophisticated atmosphere, premium luggage business" width="1200" height="600" src="/assets/business-general-service-upload-1774791597711.webp" alt="רגע נסיעה מעודן עם מזוודה יוקרתית" data-i18n-alt="contact_alt_76" data-element-type="image" data-element-id="img-1774791420709-gi11hi24g" class="zappy-editable-image" data-resize-handler-attached="true" data-original-position="static" style="position: absolute !important; object-position: 56% 63%; object-fit: cover !important; width: 100.017% !important; height: 100% !important; max-width: none !important; display: block !important; border-radius: 8px; margin: 0px !important; left: -0.0093333% !important; top: 0% !important; max-height: none !important;" data-zappy-zoom="1"></div>
     </div>
   </div>
   <div class="contact-intro-divider-wrapper">
@@ -1718,6 +1718,10 @@ html[dir="rtl"] body {
   </a>
   
   <div data-integration="accessibility:toolbar"></div>
+
+
+
+
 
 
 
@@ -2462,7 +2466,7 @@ html[dir="rtl"] body {
       "checkout_nav_75": "צור קשר",
       "checkout_nav_76": "כל המוצרים",
       "checkout_span_9": "פרטי התקשרות",
-      "contact_link_38": "<span class=\"__cf_email__\" data-cfemail=\"8bc8cec4cbc5cedcdfc4c5a6c4cdcdc2c8c2cac7a5c8c4c6\">[email&nbsp;protected]</span>",
+      "contact_link_38": "<span class=\"__cf_email__\" data-cfemail=\"8bc8cec4cbc5cedcdfc4c5a6c4cdcdc2c8c2cac7a5c8c4c6\" data-i18n=\"new_span_189\">[email&nbsp;protected]</span>",
       "contact_link_39": "0544929250",
       "contact_link_40": "הצג במפות גוגל",
       "contact_link_41": "אודות",
@@ -5518,6 +5522,34 @@ html[dir="rtl"] body {
       if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileLangMenu); }
       else { initMobileLangMenu(); }
       window.addEventListener('resize', function() { clearTimeout(window._mlrt); window._mlrt = setTimeout(initMobileLangMenu, 250); });
+    })();
+    </script>
+
+    <script>
+    (function(){
+      if(window.innerWidth>768)return;
+      function fixZW(){
+        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          var cw=w.style.getPropertyValue('width');
+          if(!cw||cw==='100%')return;
+          w.style.setProperty('width','100%','important');
+          w.style.setProperty('max-width','100%','important');
+          w.style.setProperty('height','auto','important');
+          var img=w.querySelector('img');
+          if(img){
+            img.style.setProperty('position','relative','important');
+            img.style.setProperty('width','100%','important');
+            img.style.setProperty('height','auto','important');
+            img.style.setProperty('max-width','100%','important');
+            img.style.setProperty('max-height','400px','important');
+            img.style.setProperty('object-fit','cover','important');
+            img.style.setProperty('left','0','important');
+            img.style.setProperty('top','0','important');
+          }
+        });
+      }
+      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fixZW);
+      else setTimeout(fixZW,50);
     })();
     </script>
 </body>
