@@ -1253,6 +1253,308 @@ html[dir="rtl"] body {
 }
 
 </style>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.index-craftsmanship-section {
+  position: relative;
+  background-color: #0B1723;
+  background-image:
+    radial-gradient(ellipse at 80% 10%, rgba(199,154,74,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 90%, rgba(199,154,74,0.05) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'%3E%3Cpath d='M0 60H120'/%3E%3Cpath d='M60 0V120'/%3E%3Cpath d='M0 0L120 120'/%3E%3Cpath d='M120 0L0 120'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #0B1723 0%, #122434 55%, #0A1420 100%);
+  background-size: auto, auto, 220px 220px, cover;
+  color: var(--text-light);
+  padding: 100px 0 80px;
+  overflow: visible;
+  direction: rtl;
+}
+
+.index-craftsmanship-section .ics-texture-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(135deg, rgba(199,154,74,0.04) 0%, transparent 60%);
+}
+
+/* Container: two-column grid */
+.index-craftsmanship-section .ics-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 72px;
+  align-items: start;
+  direction: rtl;
+}
+
+/* ─── RIGHT COLUMN: content ─── */
+.index-craftsmanship-section .ics-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.index-craftsmanship-section .ics-header {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.index-craftsmanship-section .ics-eyebrow {
+  display: inline-block;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #C79A4A;
+  padding-inline-end: 40px;
+  position: relative;
+  text-align: right;
+}
+
+.index-craftsmanship-section .ics-eyebrow::after {
+  content: '';
+  position: absolute;
+  inset-inline-end: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 1px;
+  background: #C79A4A;
+  opacity: 0.7;
+}
+
+.index-craftsmanship-section .ics-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  color: var(--text-light);
+  margin: 0;
+  text-align: right;
+}
+
+.index-craftsmanship-section .ics-lead {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(246,240,230,0.72);
+  margin: 0;
+  max-width: 560px;
+  text-align: right;
+}
+
+/* ─── Feature cards grid ─── */
+.index-craftsmanship-section .ics-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  direction: rtl;
+}
+
+.index-craftsmanship-section .ics-feature-card {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 24px 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(199,154,74,0.12);
+  transition: background 0.3s ease, border-color 0.3s ease;
+  direction: rtl;
+}
+
+.index-craftsmanship-section .ics-feature-card:hover {
+  background: rgba(199,154,74,0.06);
+  border-color: rgba(199,154,74,0.30);
+}
+
+.index-craftsmanship-section .ics-feature-icon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2px;
+  color: #C79A4A;
+  flex-shrink: 0;
+}
+
+.index-craftsmanship-section .ics-feature-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.index-craftsmanship-section .ics-feature-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.index-craftsmanship-section .ics-feature-text {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(246,240,230,0.65);
+  margin: 0;
+}
+
+/* ─── LEFT COLUMN: image ─── */
+.index-craftsmanship-section .ics-image-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.index-craftsmanship-section .ics-image-frame {
+  position: relative;
+  width: 100%;
+}
+
+.index-craftsmanship-section .ics-image-accent-line {
+  position: absolute;
+  top: -16px;
+  inset-inline-end: -16px;
+  width: 60%;
+  height: 60%;
+  border-top: 1px solid rgba(199,154,74,0.35);
+  border-inline-end: 1px solid rgba(199,154,74,0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.index-craftsmanship-section .ics-main-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.88) contrast(1.05);
+}
+
+.index-craftsmanship-section .ics-image-caption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  direction: rtl;
+}
+
+.index-craftsmanship-section .ics-caption-line {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #C79A4A;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.index-craftsmanship-section .ics-caption-text {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(246,240,230,0.45);
+  text-align: right;
+}
+
+/* Decorative monogram */
+.index-craftsmanship-section .ics-monogram {
+  position: absolute;
+  bottom: -40px;
+  inset-inline-start: -30px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 180px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(199,154,74,0.04);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: -0.05em;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .index-craftsmanship-section .ics-container {
+    grid-template-columns: 1fr 340px;
+    gap: 48px;
+  }
+
+  .index-craftsmanship-section .ics-main-image {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .index-craftsmanship-section {
+    padding: 80px 0 60px;
+  }
+
+  .index-craftsmanship-section .ics-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 16px;
+  }
+
+  /* On mobile: image first (top), content below */
+  .index-craftsmanship-section .ics-image-col {
+    
+  }
+
+  .index-craftsmanship-section .ics-main-image {
+    height: 280px;
+  }
+
+  .index-craftsmanship-section .ics-image-accent-line {
+    display: none;
+  }
+
+  .index-craftsmanship-section .ics-monogram {
+    display: none;
+  }
+
+  .index-craftsmanship-section .ics-features-grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .index-craftsmanship-section .ics-lead {
+    max-width: 100%;
+  }
+
+  .index-craftsmanship-section .ics-content-col {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .index-craftsmanship-section .ics-feature-card {
+    padding: 18px 14px;
+    gap: 12px;
+  }
+
+  .index-craftsmanship-section .ics-title {
+    font-size: 26px;
+  }
+}
+/* ZAPPY_POSTGEN_GUARD_RTL_ORDER:בית-craftsmanship — stripped 1 order declaration(s) conflicting with RTL grid */
+
+</style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -1951,45 +2253,98 @@ html[dir="rtl"] body {
 </section>
   
 
-<section class="index-story-section" data-layout-spec="בית-story" id="zappy-section-1">
-  <div class="index-story-container zappy-preserve-css-grid" id="zappy-auto-grid-1773655699935-7rrkly" data-zappy-auto-grid="true" data-zappy-grid-align="start" data-original-item-width="560" data-original-gap="80px" style="--zappy-grid-cols: repeat(2, minmax(0, 1fr)); grid-template-columns: repeat(2, minmax(0, 1fr));" data-zappy-explicit-columns="true">
-    <div class="index-story-content" data-grid-item-index="0">
-      <h2 class="index-story-title" data-i18n="home_h2_4">תקן NEWTON </h2>
-      <p class="index-story-paragraph" data-i18n="home_p_33">אנו מתמחים במיזוג מסורת עתיקת יומין עם עיצוב עכשווי. כל מזוודה שאנו מייבאים נבחרה בקפידה מתוך מחויבות לחומרים איכוtiים, עבודת יד מדויקת ותשומת לב לפרטים הקטנים. אנחנו לא רק מוכרים מזוודות – אנו מציעים שותפות לדרך, אביזר שמלווה אתכם בכל מסע ומעיד על הטעם והביטחון השקט שלכם.</p>
-      <p class="index-story-paragraph" data-i18n="home_p_34">מקורות האספקה שלנו משתרעים על פני בתי מלאכה אירופיים ויצרנים נבחרים, המבטיחים שכל תפר, כל רוכסן וכל ידית עומדים במבחן הזמן. אנו מאמינים שמזוודה איכותית היא השקעה – לא רק למסע הבא, אלא לעשרות שנים של נסיעות.</p>
-      <h3 class="index-story-promise" data-i18n="home_h3_12">מעוצבות להיראות יוצאות דופן היום – ולעוד עשורים רבים.</h3>
-    </div>
-    <div class="index-story-imagery zappy-grid-item-no-stretch" data-grid-item-index="1" style="overflow: hidden !important;">
-      <div class="index-story-frame">
-        <div class="index-story-accent-rule"></div>
-        <input type="checkbox" id="zappy-lightbox-toggle-img-1773655699892-8scd3u3po" class="zappy-lightbox-toggle" data-zappy-image-lightbox="true"><label class="zappy-lightbox-trigger" for="zappy-lightbox-toggle-img-1773655699892-8scd3u3po" data-zappy-image-lightbox="true"><div data-zappy-zoom-wrapper="true" data-element-id="img-1773655699892-8scd3u3po" data-element-type="image" data-zappy-zoom-wrapper-width="430px" data-zappy-zoom-wrapper-height="575px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 430px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 575px !important; display: block !important; cursor: pointer;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-click-action="expand"><img data-placeholder="index-story-image-1" data-context="A luxurious vintage leather suitcase in rich brown tones, displayed in an elegant studio setting with soft natural lighting. The suitcase features classic brass hardware, detailed stitching, and a timeless design that evokes heritage travel and craftsmanship. Shot from a slightly elevated angle to show the texture and quality of the leather, with a subtle shadow and a neutral parchment-colored background. The composition should feel editorial and museum-like, emphasizing sophistication and durability." width="600" height="800" src="/assets/business-general-service-upload-1773655759881.webp" alt="מזוודה יוקרתית בעיצוב קלאסי המדגימה את תקן NEWTON " data-element-type="image" data-element-id="img-1773655699892-8scd3u3po" class="zappy-editable-image" data-original-position="static" style="object-position: 62% 52%; display: block; position: absolute !important; object-fit: fill !important; width: 126.977% !important; height: 100% !important; max-width: none !important; margin-top: 0px !important; margin-bottom: 0px !important; left: -16.7256% !important; top: 0% !important; max-height: none !important;" data-zappy-original-width="430" data-zappy-original-height="575.203125" data-zappy-zoom="0.9" data-resize-handler-attached="true" data-zappy-click-action="expand" data-i18n-alt="home_alt_101"></div></label>
+<section class="index-craftsmanship-section" dir="rtl" data-layout-spec="בית-craftsmanship" data-zappy-section="true" id="zappy-section-1">
+  <div class="ics-container">
+
+    <!-- Right column: editorial text + feature cards -->
+    <div class="ics-content-col">
+
+      <div class="ics-header">
+        <span class="ics-eyebrow" data-i18n="new_span_190">אומנות ייצור</span>
+        <h2 class="ics-title" data-i18n="home_h2_5">בנוי כמורשת משפחתית</h2>
+        <p class="ics-lead" data-i18n="home_p_35">כל מזוודת NEWTON היא תוצר של מלאכה מדוקדקת ותשומת לב לפרטים הקטנים ביותר. אנו מאמינים שמוצר איכותי הוא השקעה לדורות, ולכן בוחרים חומרים עמידים, חומרה מעולה ועיבודים שעומדים במבחן הזמן.</p>
+      </div>
+
+      <div class="ics-features-grid">
+
+        <article class="ics-feature-card">
+          <div class="ics-feature-icon">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 4 C10 4 6 8 6 14 C6 20 10 26 16 28 C22 26 26 20 26 14 C26 8 22 4 16 4Z"></path>
+              <path d="M12 14 L15 17 L20 11"></path>
+            </svg>
+          </div>
+          <div class="ics-feature-body">
+            <h3 class="ics-feature-title" data-i18n="home_h3_13">בחירת חומרים מובחרת</h3>
+            <p class="ics-feature-text" data-i18n="home_p_36">אנו בוחרים רק חומרי גלם מהשורה הראשונה: עור איטלקי מעובד ידנית, בדים עמידים לשנים ומתכות אציליות שלא מאבדות מזוהרן.</p>
+          </div>
+        </article>
+
+        <article class="ics-feature-card">
+          <div class="ics-feature-icon">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="6" y="6" width="20" height="20" rx="2"></rect>
+              <path d="M11 16 H21"></path>
+              <path d="M16 11 V21"></path>
+            </svg>
+          </div>
+          <div class="ics-feature-body">
+            <h3 class="ics-feature-title" data-i18n="home_h3_14">חומרה בסטנדרט גבוה</h3>
+            <p class="ics-feature-text" data-i18n="home_p_37">כל רוכסן, נעילה ואבזם נבחרים בקפדנות. אנו משתמשים בחומרה שוויצרית ואיטלקית שעוברת בדיקות עמידות קפדניות לפני ההרכבה.</p>
+          </div>
+        </article>
+
+        <article class="ics-feature-card">
+          <div class="ics-feature-icon">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M8 8 H24 V24 H8 Z"></path>
+              <path d="M12 12 H20 V20 H12 Z"></path>
+              <path d="M16 8 V12"></path>
+              <path d="M16 20 V24"></path>
+              <path d="M8 16 H12"></path>
+              <path d="M20 16 H24"></path>
+            </svg>
+          </div>
+          <div class="ics-feature-body">
+            <h3 class="ics-feature-title" data-i18n="home_h3_15">דיוק פנימי מושלם</h3>
+            <p class="ics-feature-text" data-i18n="home_p_38">פנים המזוודה מעוצב בקפידה: תפרים כפולים, בטנה איכותית, תאים מאורגנים ורצועות קיבוע שמבטיחות שהחפצים שלכם יישארו במקום.</p>
+          </div>
+        </article>
+
+        <article class="ics-feature-card">
+          <div class="ics-feature-icon">
+            <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="16" cy="16" r="10"></circle>
+              <path d="M16 10 C18 13 20 14 20 16 C20 18.2 18.2 20 16 20 C13.8 20 12 18.2 12 16 C12 14 14 13 16 10Z"></path>
+            </svg>
+          </div>
+          <div class="ics-feature-body">
+            <h3 class="ics-feature-title" data-i18n="home_h3_16">גימור ופטינה</h3>
+            <p class="ics-feature-text" data-i18n="home_p_39">הגימור הסופי נעשה בעבודת יד: ליטוש, הברקה ועיבוד שכבות הגנה שנותנות למוצר מראה קלאסי שמשתפר עם השנים.</p>
+          </div>
+        </article>
+
       </div>
     </div>
+
+    <!-- Left column: image panel -->
+    <div class="ics-image-col">
+      <div class="ics-image-frame">
+        <div class="ics-image-accent-line"></div>
+        <img alt="פרטי עבודת יד במזוודות NEWTON - עור איכותי וחומרה מעולה" class="ics-main-image" src="/assets/site-index-craftsmanship-image-1.webp" data-placeholder="index-craftsmanship-image-1" data-context="Close-up detail shot of premium luggage craftsmanship for NEWTON brand: high-end leather texture, polished brass hardware, precision stitching, Italian leather grain, luxury suitcase corner detail, classic vintage travel aesthetic, warm natural lighting, editorial product photography" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <div class="ics-image-caption" data-i18n="new_div_191">
+          <span class="ics-caption-line"></span>
+          <span class="ics-caption-text" data-i18n="new_span_192">עבודת יד — פרט מתוך קולקציית NEWTON</span>
+        </div>
+      </div>
+      <div class="ics-monogram" aria-hidden="true">N</div>
+    </div>
+
   </div>
-  <div class="index-story-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="goldKeylineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#C79A4A;stop-"></stop>
-          <stop offset="15%" style="stop-color:#E2B86A;stop-opacity:1"></stop>
-          <stop offset="85%" style="stop-color:#E2B86A;stop-opacity:1"></stop>
-          <stop offset="100%" style="stop-color:#C79A4A;stop-"></stop>
-        </linearGradient>
-      </defs>
-      <line x1="0" y1="20" x2="1200" y2="20" stroke="url(#goldKeylineGradient)" stroke-width="1.5"></line>
-      <g opacity="0.6">
-        <circle cx="150" cy="20" r="2.5" fill="#E2B86A"></circle>
-        <circle cx="200" cy="20" r="2.5" fill="#E2B86A"></circle>
-        <circle cx="250" cy="20" r="2.5" fill="#E2B86A"></circle>
-        <circle cx="300" cy="20" r="2.5" fill="#E2B86A"></circle>
-        <circle cx="900" cy="20" r="2.5" fill="#E2B86A"></circle>
-        <circle cx="950" cy="20" r="2.5" fill="#E2B86A"></circle>
-        <circle cx="1000" cy="20" r="2.5" fill="#E2B86A"></circle>
-        <circle cx="1050" cy="20" r="2.5" fill="#E2B86A"></circle>
-      </g>
-      <path d="M0,80 L0,40 L1200,40 L1200,80 Z" fill="#F4ECE2"></path>
-    </svg>
-  </div>
+
+  <!-- Decorative atlas texture overlay -->
+  <div class="ics-texture-overlay" aria-hidden="true"></div>
+
 </section>
 
 
@@ -2146,6 +2501,8 @@ html[dir="rtl"] body {
   </a>
   
   <div data-integration="accessibility:toolbar"></div>
+
+
 
 
 
@@ -2416,6 +2773,7 @@ html[dir="rtl"] body {
       "new_div_178": "<span class=\"ps-marquee-item\" style>NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" style>NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <!-- duplicate for seamless loop -->\n      <span class=\"ps-marquee-item\">NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEW<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>",
       "new_div_179": "<span class=\"ps-marquee-item\" style data-i18n=\"cart_alt_43\">NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_p_172\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_span_156\">LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_p_172\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" style data-i18n=\"cart_alt_43\">NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_p_172\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_p_172\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <!-- duplicate for seamless loop -->\n      <span class=\"ps-marquee-item\" data-i18n=\"cart_alt_43\">NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_p_172\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_span_156\">LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_p_172\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_span_158\">NEW<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_p_172\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" data-i18n=\"new_p_172\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>",
       "new_div_183": "עוד לא נבחרו מוצרים מומלצים. צפו בכל המוצרים שלנו!",
+      "new_div_191": "<span class=\"ics-caption-line\"></span>\n          <span class=\"ics-caption-text\">עבודת יד — פרט מתוך קולקציית NEWTON</span>",
       "terms_h2_10": "9. שינוי תנאי השימוש",
       "terms_h2_11": "10. סיום השירות",
       "terms_h2_12": "11. דין חל ויישוב סכסוכים",
@@ -2604,6 +2962,8 @@ html[dir="rtl"] body {
       "new_span_175": "NEWTON LUXURY",
       "new_span_177": "NEWTON LUXURY",
       "new_span_189": "[email&nbsp;protected]",
+      "new_span_190": "אומנות ייצור",
+      "new_span_192": "עבודת יד — פרט מתוך קולקציית NEWTON",
       "privacy_h1_1": "מדיניות פרטיות",
       "privacy_h2_2": "1. איסוף מידע",
       "privacy_h2_3": "2. שימוש במידע",
@@ -3810,6 +4170,7 @@ html[dir="rtl"] body {
       "new_div_178": "<span class=\"ps-marquee-item\" style>NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" style>NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <!-- duplicate for seamless loop -->\n      <span class=\"ps-marquee-item\">NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEW<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>",
       "new_div_179": "<span class=\"ps-marquee-item\" style>NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\" style>NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <!-- duplicate for seamless loop -->\n      <span class=\"ps-marquee-item\">NEWTON<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEW<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>\n      <span class=\"ps-marquee-item\">NEWTON LUXURY<span class=\"ps-marquee-dot\"></span></span>",
       "new_div_183": "No recommended products have been selected yet. View all our products!",
+      "new_div_191": "<span class=\"ics-caption-line\"></span>\n          <span class=\"ics-caption-text\">Handcrafted — Detail from NEWTON Collection</span>",
       "terms_h2_10": "9. Changes to Terms of Use",
       "terms_h2_11": "10. Service Termination",
       "terms_h2_12": "11. Applicable Law and Dispute Resolution",
@@ -3998,6 +4359,8 @@ html[dir="rtl"] body {
       "new_span_175": "NEWTON LUXURY",
       "new_span_177": "NEWTON LUXURY",
       "new_span_189": "[email&nbsp;protected]",
+      "new_span_190": "Manufacturing Artistry",
+      "new_span_192": "Handcrafted — Detail from NEWTON Collection",
       "privacy_h1_1": "Privacy Policy",
       "privacy_h2_2": "1. Information Collection",
       "privacy_h2_3": "2. Use of Information",

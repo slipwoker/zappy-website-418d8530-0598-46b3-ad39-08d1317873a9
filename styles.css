@@ -2078,151 +2078,6 @@ main { margin-top: 0 !important; padding-top: 0 !important; }
     height: 60px;
     width: 2.5px;
   }
-}/* index-craftsmanship */
-.index-craftsmanship-section{position: relative;overflow: visible;background-color: #F4ECE2;background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Cg fill='none' stroke='rgba(10,20,30,0.04)' stroke-width='0.5'%3E%3Cpath d='M50,100 Q100,80 150,100 T250,100 T350,100'/%3E%3Cpath d='M50,150 Q100,130 150,150 T250,150 T350,150'/%3E%3Cpath d='M50,200 Q100,180 150,200 T250,200 T350,200'/%3E%3Cpath d='M850,100 Q900,80 950,100 T1050,100 T1150,100'/%3E%3Cpath d='M850,150 Q900,130 950,150 T1050,150 T1150,150'/%3E%3Cpath d='M850,200 Q900,180 950,200 T1050,200 T1150,200'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #F4ECE2 0%, #EFE3D4 55%, #F4ECE2 100%);background-size: 1200px 800px, 100%;background-position: left top, center;background-repeat: no-repeat;color: var(--text-dark);padding: 80px 16px 120px;}html[dir="rtl"] /* index-craftsmanship */
-.index-craftsmanship-section{direction: rtl;}
-
-.index-craftsmanship-section .index-craftsmanship-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.index-craftsmanship-section .index-craftsmanship-intro {
-  text-align: start;
-  margin-bottom: 60px;
-  max-width: 700px;
-}
-
-.index-craftsmanship-section .index-craftsmanship-intro h2 {
-  font-family: 'Assistant', sans-serif;
-  font-size: 34px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 1.15;
-  color: var(--text-dark);
-  margin-bottom: 16px;
-}
-
-.index-craftsmanship-section .index-craftsmanship-intro p {
-  font-family: 'Rubik', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.75;
-  color: var(--text-dark);
-}
-
-.index-craftsmanship-section .index-craftsmanship-grid-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 600px;
-  gap: 60px;
-  align-items: start;
-}
-
-.index-craftsmanship-section .index-craftsmanship-points-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px 32px;
-}
-
-.index-craftsmanship-section .index-craftsmanship-point {
-  text-align: start;
-  border: 1px solid rgba(10,20,30,0.10);
-  padding: 28px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 0;
-}
-
-.index-craftsmanship-section .index-craftsmanship-point h3 {
-  font-family: 'Assistant', sans-serif;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.25;
-  color: var(--text-dark);
-  margin-bottom: 12px;
-}
-
-.index-craftsmanship-section .index-craftsmanship-point p {
-  font-family: 'Rubik', sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.7;
-  color: var(--text-dark);
-  opacity: 0.85;
-}
-
-.index-craftsmanship-section .index-craftsmanship-image-container {
-  position: relative;
-  height: 100%;
-  min-height: 600px;
-}
-
-.index-craftsmanship-section .index-craftsmanship-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border: 1px solid rgba(10,20,30,0.12);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.18);
-}
-
-.index-craftsmanship-section .index-craftsmanship-divider-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.index-craftsmanship-section .index-craftsmanship-divider-wrapper svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-@media (max-width: 768px) {
-  .index-craftsmanship-section {
-    padding: 60px 16px 100px;
-  }
-
-  .index-craftsmanship-section .index-craftsmanship-intro {
-    margin-bottom: 40px;
-  }
-
-  .index-craftsmanship-section .index-craftsmanship-intro h2 {
-    font-size: 28px;
-  }
-
-  .index-craftsmanship-section .index-craftsmanship-grid-wrapper {
-    grid-template-columns: 1fr !important;
-    gap: 40px;
-  }
-
-  .index-craftsmanship-section .index-craftsmanship-points-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px;
-  }
-
-  .index-craftsmanship-section .index-craftsmanship-point {
-    padding: 20px;
-  }
-
-  .index-craftsmanship-section .index-craftsmanship-point h3 {
-    font-size: 20px;
-  }
-
-  .index-craftsmanship-section .index-craftsmanship-image-container {
-    min-height: 400px;
-    order: -1;
-  }
-
-  .index-craftsmanship-section .index-craftsmanship-divider-wrapper {
-    height: 40px;
-  }
 }/* index-testimonials */
 .index-testimonials-section{position: relative;overflow: visible;background-color: #0B1723;background-image: linear-gradient(180deg, #0B1723 0%, #12314F 55%, #0A1420 100%);color: var(--text-light);padding: 80px 16px 120px;}html[dir="rtl"] /* index-testimonials */
 .index-testimonials-section{direction: rtl;}
@@ -4883,8 +4738,6 @@ nav.navbar .sub-menu li a:hover { color: #E0B84A !important; background-color: r
 }
 /* === NAVBAR STYLE OVERRIDES END === */
 
-
-
 /* Legal Pages Content Styles */
 
 /* Legal Pages Content Styles */
@@ -5653,8 +5506,6 @@ body.accessibility-widget-visible ._access-menu {
   padding-top: 0;
 }
 
-
-
 400;500;600;700&display=swap');
 
 .index-hero-section, .index-hero-section * {
@@ -5680,10 +5531,6 @@ footer, footer * {
   display: block;
   margin-top: 4px;
 }
-
-
-
-
 
 /* ==ZAPPY V2 E-COMMERCE THEME CSS== */
 /* ═══════════════════════════════════════════════════════════════════════════ */
@@ -9434,12 +9281,6 @@ main,
 
 /* ==END ZAPPY V2 E-COMMERCE THEME CSS== */
 
-
-
-
-
-
-
 /* ============================================
    DIRECTION OVERRIDE STYLES
    Only set direction property, NOT text-align
@@ -9507,7 +9348,6 @@ html[dir="rtl"] .legal-content li,
 html[dir="rtl"] .terms-content li,
 html[dir="rtl"] .privacy-content li{direction: rtl !important;}
 
-
 /* ============================================
    V2 NAVIGATION FIX
    CRITICAL: For V2 sites created in RTL (Hebrew), the nav elements
@@ -9568,7 +9408,6 @@ html[dir="ltr"] .nav-brand {
     flex-direction: row !important;
   }
 }
-
 
 /* Language Switcher Container - Fixed Position */
 .zappy-lang-switcher-container {
@@ -9998,8 +9837,6 @@ html[dir="rtl"] body{overflow-x: clip !important;max-width: 100vw !important;}
   background: #F6F0E6;
 }
 
-
-
 /* Privacy consent checkbox — uses !important to override site form styles */
 .privacy-consent {
   margin: 16px 0 !important;
@@ -10041,8 +9878,270 @@ html[dir="rtl"] body{overflow-x: clip !important;max-width: 100vw !important;}
 [class*="btn-accent"],
 [class*="btn--accent"] { color: #333333 !important; }
 .navbar .nav-cta-btn,
-.nav-cta-btn { color: #FFFFFF !important; }
-/* === BUTTON TEXT OVERRIDES END === */
+.nav-cta-btn { color: #FFFFFF !important; }/* === BUTTON TEXT OVERRIDES END === */
+
+
+/* ═══════════════════════════════════════════════════════════
+   V2 REGENERATED SECTION CSS (בית-craftsmanship)
+   Added: 2026-03-29T13:50:18.506Z
+   ═══════════════════════════════════════════════════════════ */
+.index-craftsmanship-section{position: relative;background-color: #0B1723;background-image:
+    radial-gradient(ellipse at 80% 10%, rgba(199,154,74,0.07) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 90%, rgba(199,154,74,0.05) 0%, transparent 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'%3E%3Cpath d='M0 60H120'/%3E%3Cpath d='M60 0V120'/%3E%3Cpath d='M0 0L120 120'/%3E%3Cpath d='M120 0L0 120'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #0B1723 0%, #122434 55%, #0A1420 100%);background-size: auto, auto, 220px 220px, cover;color: var(--text-light);padding: 100px 0 80px;overflow: visible;}html[dir="rtl"] /* === BUTTON TEXT OVERRIDES END === */
+
+
+/* ═══════════════════════════════════════════════════════════
+   V2 REGENERATED SECTION CSS (בית-craftsmanship)
+   Added: 2026-03-29T13:50:18.506Z
+   ═══════════════════════════════════════════════════════════ */
+.index-craftsmanship-section{direction: rtl;}
+
+.index-craftsmanship-section .ics-texture-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(135deg, rgba(199,154,74,0.04) 0%, transparent 60%);
+}/* Container: two-column grid */
+.index-craftsmanship-section .ics-container{position: relative;z-index: 1;max-width: 1200px;margin: 0 auto;padding: 0 32px;display: grid;grid-template-columns: 1fr 420px;gap: 72px;align-items: start;}html[dir="rtl"] /* Container: two-column grid */
+.index-craftsmanship-section .ics-container{direction: rtl;}
+
+/* ─── RIGHT COLUMN: content ─── */
+.index-craftsmanship-section .ics-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.index-craftsmanship-section .ics-header {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.index-craftsmanship-section .ics-eyebrow {
+  display: inline-block;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #C79A4A;
+  padding-inline-end: 40px;
+  position: relative;
+  text-align: right;
+}
+
+.index-craftsmanship-section .ics-eyebrow::after {
+  content: '';
+  position: absolute;
+  inset-inline-end: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 1px;
+  background: #C79A4A;
+  opacity: 0.7;
+}
+
+.index-craftsmanship-section .ics-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  color: var(--text-light);
+  margin: 0;
+  text-align: right;
+}
+
+.index-craftsmanship-section .ics-lead {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(246,240,230,0.72);
+  margin: 0;
+  max-width: 560px;
+  text-align: right;
+}/* ─── Feature cards grid ─── */
+.index-craftsmanship-section .ics-features-grid{display: grid;grid-template-columns: 1fr 1fr;gap: 2px;}html[dir="rtl"] /* ─── Feature cards grid ─── */
+.index-craftsmanship-section .ics-features-grid{direction: rtl;}.index-craftsmanship-section .ics-feature-card{display: grid;grid-template-columns: 36px 1fr;gap: 16px;align-items: start;padding: 24px 20px;background: rgba(255,255,255,0.03);border: 1px solid rgba(199,154,74,0.12);transition: background 0.3s ease, border-color 0.3s ease;}html[dir="rtl"] .index-craftsmanship-section .ics-feature-card{direction: rtl;}
+
+.index-craftsmanship-section .ics-feature-card:hover {
+  background: rgba(199,154,74,0.06);
+  border-color: rgba(199,154,74,0.30);
+}
+
+.index-craftsmanship-section .ics-feature-icon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 2px;
+  color: #C79A4A;
+  flex-shrink: 0;
+}
+
+.index-craftsmanship-section .ics-feature-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.index-craftsmanship-section .ics-feature-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.index-craftsmanship-section .ics-feature-text {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(246,240,230,0.65);
+  margin: 0;
+}
+
+/* ─── LEFT COLUMN: image ─── */
+.index-craftsmanship-section .ics-image-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.index-craftsmanship-section .ics-image-frame {
+  position: relative;
+  width: 100%;
+}
+
+.index-craftsmanship-section .ics-image-accent-line {
+  position: absolute;
+  top: -16px;
+  inset-inline-end: -16px;
+  width: 60%;
+  height: 60%;
+  border-top: 1px solid rgba(199,154,74,0.35);
+  border-inline-end: 1px solid rgba(199,154,74,0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.index-craftsmanship-section .ics-main-image {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.88) contrast(1.05);
+}.index-craftsmanship-section .ics-image-caption{display: flex;align-items: center;gap: 12px;margin-top: 14px;}html[dir="rtl"] .index-craftsmanship-section .ics-image-caption{direction: rtl;}
+
+.index-craftsmanship-section .ics-caption-line {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: #C79A4A;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.index-craftsmanship-section .ics-caption-text {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(246,240,230,0.45);
+  text-align: right;
+}
+
+/* Decorative monogram */
+.index-craftsmanship-section .ics-monogram {
+  position: absolute;
+  bottom: -40px;
+  inset-inline-start: -30px;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 180px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(199,154,74,0.04);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+  letter-spacing: -0.05em;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .index-craftsmanship-section .ics-container {
+    grid-template-columns: 1fr 340px;
+    gap: 48px;
+  }
+
+  .index-craftsmanship-section .ics-main-image {
+    height: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .index-craftsmanship-section {
+    padding: 80px 0 60px;
+  }
+
+  .index-craftsmanship-section .ics-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 0 16px;
+  }
+
+  /* On mobile: image first (top), content below */
+  .index-craftsmanship-section .ics-image-col {
+    
+  }
+
+  .index-craftsmanship-section .ics-main-image {
+    height: 280px;
+  }
+
+  .index-craftsmanship-section .ics-image-accent-line {
+    display: none;
+  }
+
+  .index-craftsmanship-section .ics-monogram {
+    display: none;
+  }
+
+  .index-craftsmanship-section .ics-features-grid {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .index-craftsmanship-section .ics-lead {
+    max-width: 100%;
+  }
+
+  .index-craftsmanship-section .ics-content-col {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .index-craftsmanship-section .ics-feature-card {
+    padding: 18px 14px;
+    gap: 12px;
+  }
+
+  .index-craftsmanship-section .ics-title {
+    font-size: 26px;
+  }
+}
+/* ZAPPY_POSTGEN_GUARD_RTL_ORDER:בית-craftsmanship — stripped 1 order declaration(s) conflicting with RTL grid */
 
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
