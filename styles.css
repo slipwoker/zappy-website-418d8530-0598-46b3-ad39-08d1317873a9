@@ -10144,6 +10144,18 @@ html[dir="rtl"] body{overflow-x: clip !important;max-width: 100vw !important;}
 /* ZAPPY_POSTGEN_GUARD_RTL_ORDER:בית-craftsmanship — stripped 1 order declaration(s) conflicting with RTL grid */
 
 
+.featured-products-section .product-grid.featured-grid {
+  justify-content: center !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+.featured-products-section .container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
@@ -10735,6 +10747,9 @@ section[data-hero-type] {
 /* ========== END HORIZONTAL-PAIR GRID MEDIA FIX ========== */
 
 /* ========== END GRID RESPONSIVE FIX ========== */
+
+/* Footer contact alignment fix */
+.footer-contact li > a { display: flex; align-items: flex-start; gap: inherit; }
 
 
 /* ZAPPY_VARIANT_OPTION_STATES */
