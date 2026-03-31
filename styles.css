@@ -4637,7 +4637,7 @@ nav.navbar .sub-menu li a:hover { color: #FFFFFF !important; background-color: r
 .zappy-catalog-menu .catalog-menu-item,
 .zappy-catalog-menu .catalog-menu-all { color: #F6F0E6 !important; }
 .zappy-catalog-menu .catalog-menu-item:hover,
-.zappy-catalog-menu .catalog-menu-all:hover { color: #FFFFFF !important; background: rgba(128,128,128,0.1) !important; }
+.zappy-catalog-menu .catalog-menu-all:hover { color: #6b6b6b !important; background: rgba(128,128,128,0.1) !important; }
 .navbar .cart-link.nav-cart,
 .navbar .login-link.nav-login,
 .navbar .nav-search-toggle,
@@ -4660,12 +4660,12 @@ nav.navbar .sub-menu li a:hover { color: #FFFFFF !important; background-color: r
   .nav-menu, .nav-menu.active, .nav-menu.nav-menu-active, #navMenu, #navMenu.active, .mobile-menu, .mobile-menu.active, .mobile-nav, .mobile-nav.active { background-color: #0f2a44 !important; background: #0f2a44 !important; }
   .nav-menu.active, .nav-menu.nav-menu-active, #navMenu.active, .mobile-menu.active, .mobile-nav.active { max-height: calc(100dvh - 70px) !important; overflow-y: auto !important; }
   .nav-menu a, .nav-menu > li > a, #navMenu a, #navMenu > li > a { color: #F6F0E6 !important; }
-  .nav-menu a:hover, .nav-menu > li > a:hover { color: #FFFFFF !important; }
+  .nav-menu a:hover, .nav-menu > li > a:hover { color: #6b6b6b !important; }
   .nav-menu .dropdown-menu { background: rgba(128,128,128,0.06) !important; }
   .nav-menu .dropdown-menu a, .nav-menu .dropdown-menu li a { color: #F6F0E6 !important; }
-  .nav-menu .dropdown-menu a:hover { color: #FFFFFF !important; }
+  .nav-menu .dropdown-menu a:hover { color: #6b6b6b !important; }
   .nav-menu .sub-menu a { color: #F6F0E6 !important; }
-  .nav-menu .sub-menu a:hover { color: #FFFFFF !important; }
+  .nav-menu .sub-menu a:hover { color: #6b6b6b !important; }
   .nav-menu > li { position: relative !important; }
   .navbar .nav-menu .mobile-submenu-toggle { color: #F6F0E6 !important; position: static !important; height: auto !important; flex-shrink: 0 !important; align-self: stretch !important; }
   .mobile-toggle { color: #F6F0E6 !important; }
@@ -6628,10 +6628,10 @@ main.page-container.ecommerce-page,
   text-transform: uppercase;
 }
 .status-pending { background: #fef3c7; color: #92400e; }
-.status-paid { background: #FFFFFF; color: #007a7a; }
+.status-paid { background: #F6F0E6; color: #007a7a; }
 .status-processing { background: #dbeafe; color: #0f2a44; }
 .status-shipped { background: #e0e7ff; color: #3730a3; }
-.status-delivered { background: #FFFFFF; color: #007a7a; }
+.status-delivered { background: #F6F0E6; color: #007a7a; }
 .status-cancelled { background: #fee2e2; color: #991b1b; }
 .order-info-row {
   display: flex;
@@ -7239,7 +7239,7 @@ main.page-container.ecommerce-page,
   margin-top: 12px;
 }
 .coupon-badge {
-  background: #FFFFFF;
+  background: #F6F0E6;
   color: #007a7a;
   padding: 4px 12px;
   border-radius: 20px;
@@ -9871,17 +9871,7 @@ html[dir="rtl"] body{overflow-x: clip !important;max-width: 100vw !important;}
 }
 .privacy-consent a:hover {
   opacity: 0.75;
-}
-/* === BUTTON TEXT OVERRIDES START === */
-.btn-accent,
-.btn--accent,
-[class*="btn-accent"],
-[class*="btn--accent"] { color: #333333 !important; }
-.navbar .nav-cta-btn,
-.nav-cta-btn { color: #FFFFFF !important; }/* === BUTTON TEXT OVERRIDES END === */
-
-
-/* ═══════════════════════════════════════════════════════════
+}/* ═══════════════════════════════════════════════════════════
    V2 REGENERATED SECTION CSS (בית-craftsmanship)
    Added: 2026-03-29T13:50:18.506Z
    ═══════════════════════════════════════════════════════════ */
@@ -9889,10 +9879,7 @@ html[dir="rtl"] body{overflow-x: clip !important;max-width: 100vw !important;}
     radial-gradient(ellipse at 80% 10%, rgba(199,154,74,0.07) 0%, transparent 55%),
     radial-gradient(ellipse at 20% 90%, rgba(199,154,74,0.05) 0%, transparent 50%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'%3E%3Cpath d='M0 60H120'/%3E%3Cpath d='M60 0V120'/%3E%3Cpath d='M0 0L120 120'/%3E%3Cpath d='M120 0L0 120'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #0B1723 0%, #122434 55%, #0A1420 100%);background-size: auto, auto, 220px 220px, cover;color: var(--text-light);padding: 100px 0 80px;overflow: visible;}html[dir="rtl"] /* === BUTTON TEXT OVERRIDES END === */
-
-
-/* ═══════════════════════════════════════════════════════════
+    linear-gradient(180deg, #0B1723 0%, #0C243A 55%, #0A1420 100%);background-size: auto, auto, 220px 220px, cover;color: var(--text-light);padding: 100px 0 80px;overflow: visible;}html[dir="rtl"] /* ═══════════════════════════════════════════════════════════
    V2 REGENERATED SECTION CSS (בית-craftsmanship)
    Added: 2026-03-29T13:50:18.506Z
    ═══════════════════════════════════════════════════════════ */
@@ -10161,6 +10148,15 @@ html[dir="rtl"] body{overflow-x: clip !important;max-width: 100vw !important;}
   transform: translateY(0) !important;
   color: var(--background-color) !important;
 }
+/* === BUTTON TEXT OVERRIDES START === */
+.btn-accent,
+.btn--accent,
+[class*="btn-accent"],
+[class*="btn--accent"] { color: #333333 !important; }
+.navbar .nav-cta-btn,
+.nav-cta-btn { color: #FFFFFF !important; }
+/* === BUTTON TEXT OVERRIDES END === */
+
 
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
