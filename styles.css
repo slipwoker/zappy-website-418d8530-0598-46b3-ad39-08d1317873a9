@@ -10156,6 +10156,12 @@ html[dir="rtl"] body{overflow-x: clip !important;max-width: 100vw !important;}
   align-items: center !important;
 }
 
+.products-section .ps-hero .ps-brand-badge .ps-card-tag {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  color: var(--background-color) !important;
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
