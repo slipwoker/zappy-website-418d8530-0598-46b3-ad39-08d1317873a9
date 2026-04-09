@@ -22,7 +22,7 @@ https://example.com/contact
 
 ### Products
 https://example.com/products
-המוצרים שלנו - NEWTON
+המוצרים שלנו - NEWTON 
 
 ### Cart
 https://example.com/cart
@@ -46,11 +46,11 @@ https://example.com/order-success
 
 ### Product Detail
 https://example.com/product/:slug
-פרטי המוצר - NEWTON
+פרטי המוצר - NEWTON 
 
 ### Category
 https://example.com/category/:slug
-מוצרים - NEWTON
+מוצרים - NEWTON 
 
 ## Legal & Policy
 
